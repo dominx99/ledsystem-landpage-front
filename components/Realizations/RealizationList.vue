@@ -37,7 +37,7 @@ export default {
           name: 'Oświetlenie LED #2',
           mainImage: {
             thumbnail: {
-              url: ''
+              url: 'http://ledsystem.com.pl/img/B/B1mini.jpg',
             },
           },
         },
@@ -45,7 +45,7 @@ export default {
           name: 'Oświetlenie LED #3',
           mainImage: {
             thumbnail: {
-              url: ''
+              url: 'http://ledsystem.com.pl/img/C/C1mini.jpg',
             },
           },
         },
