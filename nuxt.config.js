@@ -9,7 +9,7 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    titleTemplate: '%s - landpage',
+    titleTemplate: 'Ledsystem',
     title: 'landpage',
     htmlAttrs: {
       lang: 'en'
@@ -71,5 +71,9 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
+  },
+
+  server: {
+    port: process.env.PORT,
   }
 }
