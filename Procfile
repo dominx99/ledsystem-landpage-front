@@ -1,1 +1,1 @@
-web: nuxt build && nuxt start
+web: nuxt generate && nuxt start
