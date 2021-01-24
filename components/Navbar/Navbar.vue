@@ -4,23 +4,24 @@
   color="dark"
   fixed
   style="opacity: .97"
+  id="navbar"
 >
     <v-container class="py-0 fill-height">
       <v-toolbar-title
         class="headline text-uppercase navbar-title"
         style="letter-spacing: 2px !important; cursor: pointer"
-        @click="$router.push('/')"
+        @click="logoAction()"
       >
         Ledsystem
       </v-toolbar-title>
       <v-spacer></v-spacer>
       <v-btn
-        v-for="link in links"
-        :key="link"
+        v-for="(link, index) in links"
+        :key="index"
         text
-      >
-        {{ link }}
-      </v-btn>
+        @click="$vuetify.goTo(link.targetElement)"
+        v-text="link.name"
+      ></v-btn>
     </v-container>
   </v-app-bar>
 </template>
@@ -29,9 +30,26 @@
 export default {
   data: () => ({
     links: [
-      'Realizacje',
-      'Kontakt',
+      {
+        name: 'Realizacje',
+        targetElement: '#realizations',
+      },
+      {
+        name: 'Kontakt',
+        targetElement: '#contact',
+      }
     ],
   }),
+  methods: {
+    logoAction() {
+      if (this.$route.name === 'index') {
+        this.$vuetify.goTo('#navbar')
+
+        return
+      }
+
+      this.$router.push('/')
+    }
+  },
 }
 </script>
