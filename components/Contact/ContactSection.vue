@@ -2,11 +2,10 @@
   <section
     id="contact"
     class="dark2"
-    style="margin-bottom: 7.5rem"
   >
     <v-container>
       <h3 class="text-h3 text-center my-16">Kontakt</h3>
-      <v-card class="d-flex align-items-center">
+      <v-card class="contact-card">
         <ContactForm />
         <MediaCard />
       </v-card>
@@ -25,3 +24,15 @@ export default {
   }
 }
 </script>
+
+<style lang="scss">
+.contact-card {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 3rem;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+  }
+}
+</style>

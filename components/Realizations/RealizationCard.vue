@@ -1,6 +1,6 @@
 <template>
   <v-card
-    class="card-width ma-5 dark2"
+    class="card-width ma-5 teal dark3"
   >
     <v-img
       height="250"
@@ -18,6 +18,10 @@ export default {
 
 <style lang="scss" scoped>
 .card-width {
-  width: calc(50% - 40px);
+  width: calc(100% - 40px);
+
+  @media (min-width: 768px) {
+    width: calc(50% - 40px);
+  }
 }
 </style>

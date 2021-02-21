@@ -25,9 +25,13 @@
   }
 </script>
 
-<style>
+<style lang="scss">
 .media-card {
-  width: 50%;
+  width: 100%;
+
+  @media (min-width: 768px) {
+    width: 50%;
+  }
 }
 </style>
 

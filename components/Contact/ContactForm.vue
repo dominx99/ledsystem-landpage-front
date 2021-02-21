@@ -10,7 +10,7 @@
     ></v-textarea>
     <v-btn
       class="float-right"
-      color="deep-purple"
+      color="teal"
     >Wyślij</v-btn>
     <div style="clear:both"></div>
   </v-form>
@@ -18,6 +18,10 @@
 
 <style scoped lang="scss">
 .contact-form {
-  width: 50%;
+  width: 100%;
+
+  @media (min-width: 768px) {
+    width: 50%;
+  }
 }
 </style>

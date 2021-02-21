@@ -5,6 +5,8 @@
     <v-main class="dark2">
       <nuxt />
     </v-main>
+
+    <Footer />
   </v-app>
 </template>
 
