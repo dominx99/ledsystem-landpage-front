@@ -1,5 +1,5 @@
 <template>
-  <section id="realizations">
+  <section id="realizations" class="dark1 pb-16">
     <v-container>
       <h3 class="text-h3 text-center my-16">Realizacje</h3>
       <v-layout

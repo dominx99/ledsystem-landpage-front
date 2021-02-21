@@ -1,6 +1,6 @@
 <template>
   <v-card
-    class="card-width ma-5"
+    class="card-width ma-5 dark2"
   >
     <v-img
       height="250"

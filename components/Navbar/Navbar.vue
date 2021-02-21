@@ -1,19 +1,17 @@
 <template>
   <v-app-bar
-  app
-  color="dark"
-  fixed
-  style="opacity: .97"
-  id="navbar"
->
+    app
+    color="dark"
+    fixed
+    id="navbar"
+    style="background: rgb(16, 21, 30) none repeat scroll 0% 0% !important;"
+  >
     <v-container class="py-0 fill-height">
-      <v-toolbar-title
-        class="headline text-uppercase navbar-title"
-        style="letter-spacing: 2px !important; cursor: pointer"
-        @click="logoAction()"
-      >
-        Ledsystem
-      </v-toolbar-title>
+      <v-img
+        src="ledlogo_white.png"
+        max-height="49"
+        max-width="250"
+      />
       <v-spacer></v-spacer>
       <v-btn
         v-for="(link, index) in links"
@@ -21,7 +19,16 @@
         text
         @click="$vuetify.goTo(link.targetElement)"
         v-text="link.name"
+        class="d-none d-md-flex"
       ></v-btn>
+      <v-btn
+        icon
+        tile
+        class="d-sm-flex d-md-none"
+        style="margin-right: -12px;"
+      >
+        <v-icon>mdi-menu</v-icon>
+      </v-btn>
     </v-container>
   </v-app-bar>
 </template>

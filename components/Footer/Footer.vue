@@ -10,7 +10,7 @@
         flat
         tile
         width="100%"
-        class="deep-purple text-center"
+        class="purple darken-3 text-center"
       >
         <v-card-text>
           <v-btn

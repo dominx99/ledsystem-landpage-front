@@ -1,14 +1,10 @@
 <template>
-  <v-app id="inspire">
+  <v-app>
     <Navbar />
 
-    <v-main class="grey darken-4">
-      <v-content class="pa-0">
-        <nuxt />
-      </v-content>
+    <v-main class="dark2">
+      <nuxt />
     </v-main>
-
-    <Footer />
   </v-app>
 </template>
 
