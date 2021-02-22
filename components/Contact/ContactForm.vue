@@ -1,5 +1,5 @@
 <template>
-  <v-form class="contact-form pa-10 dark1">
+  <v-form class="contact-form pa-10 dark3">
     <v-text-field
       label="Email"
       filled
@@ -19,9 +19,10 @@
 <style scoped lang="scss">
 .contact-form {
   width: 100%;
+  border-radius: 8px 8px 0 0;
 
-  @media (min-width: 768px) {
-    width: 50%;
+  @media (min-width: 768) {
+    border-radius: 8px 0 0 8px;
   }
 }
 </style>

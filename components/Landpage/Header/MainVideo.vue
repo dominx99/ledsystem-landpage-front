@@ -1,5 +1,5 @@
 <template>
-  <section class="header-section"light>
+  <section class="header-section">
     <v-container class="header-container">
         <header class="header-box">
           <h1 class="text-h3 title">Oświetlenie pomieszczeń</h1>

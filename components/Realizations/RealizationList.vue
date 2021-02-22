@@ -2,15 +2,18 @@
   <section id="realizations" class="dark1 pb-16">
     <v-container>
       <h3 class="text-h3 text-center my-16">Realizacje</h3>
-      <v-layout
-        class="d-flex justify-start flex-wrap"
-      >
-        <RealizationCard
+      <v-row>
+        <v-col
           v-for="(realization, index) in realizations"
-          :key="index"
-          :realization="realization"
-        />
-      </v-layout>
+          :cols="12"
+          class="mb-md-8"
+        >
+          <RealizationCard
+            :key="index"
+            :realization="realization"
+          />
+        </v-col>
+      </v-row>
     </v-container>
   </section>
 </template>
@@ -26,7 +29,7 @@ export default {
     return {
       realizations: [
         {
-          name: 'Oświetlenie LED #1',
+          name: 'Dom Parterowy',
           mainImage: {
             thumbnail: {
               url: 'http://ledsystem.com.pl/img/A/A1mini.jpg',
