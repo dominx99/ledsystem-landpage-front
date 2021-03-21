@@ -5,11 +5,11 @@
       <v-row>
         <v-col
           v-for="(realization, index) in realizations"
+          :key="index"
           :cols="12"
-          class="mb-md-8"
+          :md="6"
         >
           <RealizationCard
-            :key="index"
             :realization="realization"
           />
         </v-col>

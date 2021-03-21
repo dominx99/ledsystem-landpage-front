@@ -99,7 +99,7 @@ export default {
 
 <style lang="scss">
 .carousel-item-image .v-image__image {
-  filter: brightness(10%);
+  filter: brightness(20%) saturate(0%) blur(30px);
 }
 
 .header-section {
