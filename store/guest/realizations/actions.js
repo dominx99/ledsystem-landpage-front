@@ -13,4 +13,18 @@ export default {
       commit('removeLoading', 'realizations')
     }
   },
+  async find({ commit }, slug) {
+    try {
+      commit('setLoading', 'realization')
+
+      const res = await this.$axios.get(`v1/realizations/${slug}`)
+
+      commit('setRealization', res.data)
+      commit('removeLoading', 'realization')
+    } catch (e) {
+      console.error("Could not load realization")
+
+      commit('removeLoading', 'realization')
+    }
+  },
 }

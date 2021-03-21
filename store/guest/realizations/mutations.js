@@ -15,6 +15,10 @@ export default {
     state.realizations = realizations
   },
 
+  setRealization: ({ state }, realization) => {
+    state.realization = realization
+  },
+
   setErrors({ state }, { name, errors }) {
     state.errors[name] = errors
   },
