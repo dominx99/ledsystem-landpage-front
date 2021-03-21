@@ -20,40 +20,18 @@
 
 <script>
 import RealizationCard from './RealizationCard'
+import { mapState } from 'vuex'
 
 export default {
   components: {
     RealizationCard,
   },
-  data() {
-    return {
-      realizations: [
-        {
-          name: 'Dom Parterowy',
-          mainImage: {
-            thumbnail: {
-              url: 'http://ledsystem.com.pl/img/A/A1mini.jpg',
-            },
-          },
-        },
-        {
-          name: 'Oświetlenie LED #2',
-          mainImage: {
-            thumbnail: {
-              url: 'http://ledsystem.com.pl/img/B/B1mini.jpg',
-            },
-          },
-        },
-        {
-          name: 'Oświetlenie LED #3',
-          mainImage: {
-            thumbnail: {
-              url: 'http://ledsystem.com.pl/img/C/C1mini.jpg',
-            },
-          },
-        },
-      ],
-    }
+  computed: mapState({
+    realizations: state => state.guest.realizations.state.realizations,
+    loading: state => state.guest.realizations.state.loading.realizationList,
+  }),
+  mounted() {
+    this.$store.dispatch('guest/realizations/fetch')
   }
 }
 </script>
