@@ -4,7 +4,7 @@ export const state = () => ({
 
 export const actions = {
   login({}, { email, password }) {
-    return this.$axios.post('/v1/auth/login', {
+    return this.$axios.post('api/v1/auth/login', {
       email,
       password,
     })

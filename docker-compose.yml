@@ -1,0 +1,17 @@
+version: "3.8"
+
+services:
+  nodejs:
+    build: ./
+    working_dir: "/application"
+    environment:
+      - HOST=0.0.0.0
+    volumes:
+      - .:/application
+    networks:
+      ledsystem:
+        ipv4_address: 10.14.0.2
+
+networks:
+  ledsystem:
+    external: true

@@ -3,7 +3,7 @@ export default {
     try {
       commit('setLoading', 'realizations')
 
-      const res = await this.$axios.get(`v1/realizations`)
+      const res = await this.$axios.get(`api/v1/realizations`)
 
       commit('setRealizations', res.data)
       commit('removeLoading', 'realizations')
@@ -28,6 +28,6 @@ export default {
       data.append(itemKey, params[itemKey])
     }
 
-    return this.$axios.post(`v1/realizations`, data)
+    return this.$axios.post(`api/v1/realizations`, data)
   }
 }

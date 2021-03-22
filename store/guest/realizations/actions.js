@@ -3,7 +3,7 @@ export default {
     try {
       commit('setLoading', 'realizations')
 
-      const res = await this.$axios.get(`v1/realizations`)
+      const res = await this.$axios.get(`api/v1/realizations`)
 
       commit('setRealizations', res.data)
       commit('removeLoading', 'realizations')
@@ -17,7 +17,7 @@ export default {
     try {
       commit('setLoading', 'realization')
 
-      const res = await this.$axios.get(`v1/realizations/${slug}`)
+      const res = await this.$axios.get(`api/v1/realizations/${slug}`)
 
       commit('setRealization', res.data)
       commit('removeLoading', 'realization')
