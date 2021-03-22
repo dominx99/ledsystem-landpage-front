@@ -86,4 +86,8 @@ export default {
   server: {
     port: process.env.PORT,
   },
+
+  publicRuntimeConfig: {
+    baseURL: process.env.BASE_URL || 'https://ledsystem-landpage-api.herokuapp.com/'
+  }
 }
