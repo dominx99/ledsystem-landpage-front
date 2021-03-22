@@ -49,11 +49,7 @@ export default {
   ],
 
   axios: {
-    proxy: true
-  },
-
-  proxy: {
-    '/api': 'http://ledsystem.local/'
+    baseURL: process.env.BASE_URL,
   },
 
   // Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify
@@ -87,7 +83,8 @@ export default {
     port: process.env.PORT,
   },
 
-  publicRuntimeConfig: {
-    baseURL: process.env.BASE_URL || 'https://ledsystem-landpage-api.herokuapp.com/'
-  }
+  env: {
+    baseUrl: process.env.BASE_URL,
+    nodeEnv: process.env.NODE_ENV,
+  },
 }
