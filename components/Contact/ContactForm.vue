@@ -21,7 +21,7 @@
   width: 100%;
   border-radius: 8px 8px 0 0;
 
-  @media (min-width: 768) {
+  @media (min-width: 768px) {
     border-radius: 8px 0 0 8px;
   }
 }

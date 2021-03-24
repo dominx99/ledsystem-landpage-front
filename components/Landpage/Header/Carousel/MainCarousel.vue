@@ -55,40 +55,54 @@
 import LightbulbIcon from './../../../Icons/LightbulbIcon.vue'
 import LedStripIcon from './../../../Icons/LedStripIcon.vue'
 import SocketIcon from './../../../Icons/SocketIcon.vue'
+import ProjectManagementIcon from './../../../Icons/ProjectManagmentIcon.vue'
 
 export default {
   data: () => ({
     items: [
       {
-        src: 'http://ledsystem.com.pl/img/C/10.jpg',
-        title: 'Oświetlenie pomieszczeń',
-        subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc a porta nisl. Mauris viverra, nibh a rutrum finibus, sapien ex vestibulum eros, vitae ultricies turpis quam vitae nulla',
+        src: 'https://trello-attachments.s3.amazonaws.com/60054e6905c5e81d70bd86b3/60060ea5a515b189180b3db3/0b10917459018d96b86391322b9f8c2f/tlo1.JPG',
+        title: 'Projektowanie Oświetlenia',
+        subtitle: 'Oświetlamy wnętrza i zewnętrza, aranżując światło dopasowane do potrzeb danego pomieszczenia, przeznaczenia, designu oraz oczekiwań klienta.',
         icon: {
-          element: LightbulbIcon,
+          element: ProjectManagementIcon,
           height: 184,
           width: 184,
-          color: '#84FFFF',
+          color: '#FEFEFE',
         },
       },
       {
-        src: 'http://ledsystem.com.pl/img/A/1.jpg',
-        title: 'Oświetlenie pomieszczeń',
-        subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc a porta nisl. Mauris viverra, nibh a rutrum finibus, sapien ex vestibulum eros, vitae ultricies turpis quam vitae nulla',
+        src: 'https://trello-attachments.s3.amazonaws.com/60054e6905c5e81d70bd86b3/60060ea5a515b189180b3db3/d5aad01cb6cb5eaa6e445c388b33db0f/tlo2.JPG',
+        title: 'Taśmy Led',
+        subtitle: 'W naszej ofercie znajduje się szerokie spektrum taśm led, pozwalają one tworzyć światło dekoracyjne ale także użytkowe, co udało nam się udowodnić w realizacji MARINA IŁAWA',
         icon: {
           element: LedStripIcon,
           height: 184,
           width: 184,
+          color: '#FEFEFE',
         },
       },
       {
-        src: 'http://ledsystem.com.pl/img/D/1.jpg',
-        title: 'Oświetlenie pomieszczeń',
-        subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc a porta nisl. Mauris viverra, nibh a rutrum finibus, sapien ex vestibulum eros, vitae ultricies turpis quam vitae nulla',
+        src: 'https://trello-attachments.s3.amazonaws.com/60054e6905c5e81d70bd86b3/60060ea5a515b189180b3db3/fba4014d2ff385946fbb545e74629cc9/tlo3.JPG',
+        title: 'Elektroinstalacje',
+        subtitle: 'Zajmujemy się wykonaniem i modernizacją instalacji elektrycznych oraz teletechnicznych. Także koordynacją prac z nimi związanych',
         icon: {
           element: SocketIcon,
           height: 184,
           width: 184,
           color: '#FEFEFE',
+        },
+      },
+      {
+        src: 'https://trello-attachments.s3.amazonaws.com/60054e6905c5e81d70bd86b3/60060ea5a515b189180b3db3/4823d348e1293534c77dca0ed8269fc1/tlo4.JPG',
+        title: 'Oprawy Oświetleniowe',
+        subtitle: 'Doświadczenie zdobyte w trakcie usług montażowych, wykorzytujemy przy sprzedaży lamp i źródeł śwaitła. Współpracujemy z wieloma renomowanymi markami z POLSKI i EUROPY',
+        icon: {
+          element: LightbulbIcon,
+          height: 184,
+          width: 184,
+          color: '#FEFEFE',
+          //color: '#84FFFF',
         },
       },
     ],
@@ -99,7 +113,7 @@ export default {
 
 <style lang="scss">
 .carousel-item-image .v-image__image {
-  filter: brightness(20%) saturate(0%) blur(30px);
+  filter: brightness(60%);
 }
 
 .header-section {

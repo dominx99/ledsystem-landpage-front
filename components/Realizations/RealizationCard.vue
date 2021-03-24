@@ -5,7 +5,7 @@
         class="teal dark3"
       >
         <v-img
-          :aspect-ratio="16/7"
+          :aspect-ratio="16/9"
           :src="thumbnailUrl()"
         ></v-img>
 

@@ -32,6 +32,7 @@ export default {
   plugins: [
     '~/plugins/vee-validate.js',
     '~/plugins/axios.js',
+    '~/plugins/init.client.js',
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components

@@ -8,7 +8,7 @@
   >
     <v-container class="py-0 fill-height">
       <v-img
-        src="ledlogo_white.png"
+        src="/ledlogo_white.png"
         max-height="49"
         max-width="200"
         type="button"
@@ -19,7 +19,7 @@
         v-for="(link, index) in links"
         :key="index"
         text
-        @click="$vuetify.goTo(link.targetElement)"
+        @click="goToElement(link.targetElement)"
         v-text="link.name"
         class="d-none d-md-flex"
       ></v-btn>
@@ -87,7 +87,14 @@ export default {
 
       this.$router.push('/')
     },
-    goToElement(targetElement) {
+    async goToElement(targetElement) {
+      if (this.$route.path != '/') {
+        this.$router.push('/')
+        setTimeout(() => this.$vuetify.goTo(targetElement), 500)
+
+        return
+      }
+
       this.$vuetify.goTo(targetElement)
 
       this.extended = false

@@ -1,14 +1,22 @@
 <template>
   <v-container>
-    <div class="mt-10" v-if="!loading">
+    <div class="mt-5" v-if="!loading">
+      <v-btn
+        icon
+        class="mb-10"
+        @click="back()"
+      >
+        <v-icon>mdi-arrow-left</v-icon>
+      </v-btn>
       <v-row>
-        <v-col :md="6">
+        <v-col md="6" cols="12">
           <v-img
             class="rounded-lg"
             :src="mainImageThumbnailUrl()"
+            :aspect-ratio="16/9"
           ></v-img>
         </v-col>
-        <v-col :md="6">
+        <v-col md="6" xs="12">
           <h2 class="text-uppercase h2" v-text="realization.name"></h2>
           <p
             class="subtitle-1 mt-6"
@@ -18,7 +26,8 @@
       </v-row>
       <v-row class="my-10">
         <v-col
-          :md="2"
+          cols="6"
+          md="2"
           v-for="(image, index) in thumbnails()"
           :key="index"
         >
@@ -55,6 +64,9 @@ export default {
     thumbnails() {
       return this.realization.images.filter(image => image.type == 'thumbnail')
     },
+    back() {
+      this.$router.back()
+    }
   }
 }
 </script>
