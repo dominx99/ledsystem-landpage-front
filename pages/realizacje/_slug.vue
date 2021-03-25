@@ -1,5 +1,5 @@
 <template>
-  <v-container>
+  <v-container id="realizationPage">
     <div class="mt-5" v-if="!loading">
       <v-btn
         icon
@@ -28,13 +28,15 @@
         <v-col
           cols="6"
           md="2"
-          v-for="(image, index) in thumbnails()"
+          v-for="(image, index) in realization.images"
           :key="index"
         >
           <v-img
-            :src="image.url"
-            class="rounded-lg"
+            :src="thumbnail(image).url"
+            class="rounded-lg bigpicture-image"
             :aspect-ratio="16/9"
+            @click="openFullScreen($event, index)"
+            :data-bp="original(image).url"
           />
         </v-col>
       </v-row>
@@ -44,6 +46,7 @@
 
 <script>
 import { mapState } from 'vuex'
+import BigPicture from 'bigpicture'
 
 export default {
   async asyncData({ params }) {
@@ -61,12 +64,29 @@ export default {
     mainImageThumbnailUrl() {
       return this.realization.mainImage.find(image => image.type == 'thumbnail').url
     },
-    thumbnails() {
-      return this.realization.images.filter(image => image.type == 'thumbnail')
+    thumbnail(images) {
+      return images.find(image => image.type == 'thumbnail')
+    },
+    original(images) {
+      return images.find(image => image.type == 'original')
     },
     back() {
       this.$router.back()
-    }
+    },
+    openFullScreen(e, key) {
+      console.log('open full screen')
+
+      BigPicture({
+        el: e.target,
+        gallery: document.querySelectorAll('#realizationPage .bigpicture-image'),
+        position: key,
+      })
+
+      /* BigPicture({ */
+      /*   el: e.target, */
+      /*   imgSrc: this.original(images).url, */
+      /* }) */
+    },
   }
 }
 </script>

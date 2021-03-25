@@ -13,6 +13,7 @@
   "dependencies": {
     "@nuxtjs/axios": "^5.12.5",
     "@nuxtjs/vuetify": "^1.11.3",
+    "bigpicture": "^2.5.3",
     "core-js": "^3.8.2",
     "nuxt": "^2.14.12",
     "vee-validate": "^3.4.5"
