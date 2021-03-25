@@ -37,6 +37,7 @@
             :aspect-ratio="16/9"
             @click="openFullScreen($event, index)"
             :data-bp="original(image).url"
+            aria-controls
           />
         </v-col>
       </v-row>
