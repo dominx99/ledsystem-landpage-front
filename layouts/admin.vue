@@ -2,7 +2,7 @@
   <v-app id="inspire" :style="{background: $vuetify.theme.themes[theme].background}">
     <v-navigation-drawer
       v-model="drawer"
-      :mobile-break-point="600"
+      :mobile-breakpoint="600"
       :mini-variant="$vuetify.breakpoint.mdAndDown && $vuetify.breakpoint.smAndUp"
       :style="{background: $vuetify.theme.themes[theme].drawer}"
       app
@@ -40,13 +40,13 @@
       <v-toolbar-title>Ledsystem</v-toolbar-title>
     </v-app-bar>
 
-    <v-content>
+    <v-main>
       <v-container
         fluid
       >
         <nuxt />
       </v-container>
-    </v-content>
+    </v-main>
   </v-app>
 </template>
 

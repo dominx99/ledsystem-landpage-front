@@ -82,12 +82,7 @@ export default {
         gallery: document.querySelectorAll('#realizationPage .bigpicture-image'),
         position: key,
       })
-
-      /* BigPicture({ */
-      /*   el: e.target, */
-      /*   imgSrc: this.original(images).url, */
-      /* }) */
-    },
+      },
   }
 }
 </script>

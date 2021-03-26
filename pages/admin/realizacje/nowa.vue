@@ -103,6 +103,7 @@ import { mapState, mapActions, mapMutations } from 'vuex'
 
 export default {
   layout: 'admin',
+  middleware: 'auth',
   components: {
     ValidationObserver,
     ValidationProvider,

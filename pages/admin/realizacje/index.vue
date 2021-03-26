@@ -52,6 +52,7 @@
 <script>
   export default {
     layout: 'admin',
+    middleware: 'auth',
     mounted() {
       this.$store.dispatch('admin/realizations/fetch')
     },
@@ -96,7 +97,7 @@
     },
     methods: {
       editRealization(realization) {
-        this.$router.push({ name: 'admin-realizacja', params: { realization: realization.slug } })
+        this.$router.push({ name: 'admin-realizacje-slug', params: { slug: realization.slug } })
       },
       imageUrl(product) {
         return ''
