@@ -42,7 +42,6 @@
         color="primary"
         label="Opis"
         v-model="form.description"
-        @input="handleName"
         required
       />
     </ValidationProvider>
