@@ -1,4 +1,5 @@
 import colors from 'vuetify/es5/util/colors'
+import axios from 'axios'
 
 export default {
   // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
@@ -87,4 +88,19 @@ export default {
     baseUrl: process.env.BASE_URL,
     nodeEnv: process.env.NODE_ENV,
   },
+
+  generate: {
+    routes(callback) {
+      axios
+        .get(process.env.GENERATE_BASE_URL + '/api/v1/realizations')
+        .then(res => {
+          const routes = res.data.map(realization => {
+            return '/realizacje/' + realization.slug
+          })
+
+          callback(null, routes)
+        })
+        .catch(callback)
+    }
+  }
 }
