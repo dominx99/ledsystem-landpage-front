@@ -43,6 +43,13 @@
         >
           <v-icon>mdi-pencil</v-icon>
         </v-btn>
+        <v-btn
+          @click="handleRemoveRealization(item)"
+          color="red"
+          icon
+        >
+          <v-icon>mdi-delete</v-icon>
+        </v-btn>
       </template>
 
     </v-data-table>
@@ -50,63 +57,75 @@
 </template>
 
 <script>
-  export default {
-    layout: 'admin',
-    middleware: 'auth',
-    mounted() {
-      this.$store.dispatch('admin/realizations/fetch')
+import { mapActions } from 'vuex'
+
+export default {
+  layout: 'admin',
+  middleware: 'auth',
+  mounted() {
+    this.fetch()
+  },
+  computed: {
+    realizations() {
+      return this.$store.state.admin.realizations.state.realizations
     },
-    computed: {
-      realizations() {
-        return this.$store.state.admin.realizations.state.realizations
-      },
-      loading() {
-        return this.$store.state.admin.realizations.state.loading.realizations
-      },
+    loading() {
+      return this.$store.state.admin.realizations.state.loading.realizations
     },
-    data () {
-      return {
-        selected: [],
-        search: '',
-        headers: [
-          {
-            text: 'Obrazek',
-            sortable: false,
-            filterable: false,
-            value: 'image',
-          },
-          {
-            text: 'Nazwa',
-            align: 'start',
-            sortable: true,
-            value: 'name',
-          },
-          {
-            text: 'Slug',
-            align: 'start',
-            sortable: true,
-            value: 'slug',
-          },
-          {
-            text: 'Actions',
-            value: 'actions',
-            sortable: false,
-          },
-        ],
+  },
+  data () {
+    return {
+      selected: [],
+      search: '',
+      headers: [
+        {
+          text: 'Obrazek',
+          sortable: false,
+          filterable: false,
+          value: 'image',
+        },
+        {
+          text: 'Nazwa',
+          align: 'start',
+          sortable: true,
+          value: 'name',
+        },
+        {
+          text: 'Slug',
+          align: 'start',
+          sortable: true,
+          value: 'slug',
+        },
+        {
+          text: 'Actions',
+          value: 'actions',
+          sortable: false,
+        },
+      ],
+    }
+  },
+  methods: {
+    ...mapActions('admin/realizations', ['fetch', 'removeRealization']),
+    editRealization(realization) {
+      this.$router.push({ name: 'admin-realizacje-slug', params: { slug: realization.slug } })
+    },
+    async handleRemoveRealization(realization) {
+      try {
+        await this.removeRealization(realization.id)
+
+        this.fetch()
+      } catch (e) {
+        alert('Nie udało się usunąć realizacji')
       }
     },
-    methods: {
-      editRealization(realization) {
-        this.$router.push({ name: 'admin-realizacje-slug', params: { slug: realization.slug } })
-      },
-      imageUrl(product) {
-        return ''
-        if (! product.image) {
-          return process.env.storageUrl + product.images[0].thumbnail.path
-        }
+    imageUrl(product) {
+      return ''
+      if (! product.image) {
+        return process.env.storageUrl + product.images[0].thumbnail.path
+      }
 
-        return process.env.storageUrl + product.image.thumbnail.path
-      },
-    }
+      return process.env.storageUrl + product.image.thumbnail.path
+    },
   }
+}
 </script>

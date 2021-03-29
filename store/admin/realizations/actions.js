@@ -128,4 +128,8 @@ export default {
   setMainImage({}, { realizationId, mediaId }) {
     return this.$axios.post(`/api/v1/realizations/${realizationId}/set-main-image`, { mediaId })
   },
+
+  removeRealization({}, realizationId) {
+    return this.$axios.post(`/api/v1/realizations/${realizationId}/remove`)
+  }
 }
