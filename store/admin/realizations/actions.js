@@ -28,6 +28,40 @@ export default {
       commit('removeLoading', 'realizations')
     }
   },
+
+  async fetchRealizationImages({ commit }, realizationId) {
+    try {
+      commit('setLoading', 'realizationImages')
+
+      const res = await this.$axios.get(`api/v1/realizations/${realizationId}/images`)
+
+      await commit('setRealizationImages', res.data)
+
+      commit('removeLoading', 'realizationImages')
+    } catch (e) {
+      console.error("Could not load realization images")
+
+      commit('removeLoading', 'realizationImages')
+    }
+  },
+
+  async fetchRealizationMainImage({ commit }, realizationId) {
+    try {
+      commit('setLoading', 'realizationMainImage')
+
+      const res = await this.$axios.get(`api/v1/realizations/${realizationId}/main-image`)
+
+      await commit('setRealizationMainImage', res.data)
+
+      commit('removeLoading', 'realizationMainImage')
+    } catch (e) {
+      console.error("Could not load realization main image")
+
+      commit('removeLoading', 'realizationMainImage')
+    }
+  },
+
+
   async update({ state, commit }) {
     try {
       commit('setLoading', 'editRealization')
@@ -85,5 +119,13 @@ export default {
     }
 
     return this.$axios.post(`api/v1/realizations`, data)
-  }
+  },
+
+  removeImage({}, mediaId) {
+    return this.$axios.post(`/api/v1/medias/${mediaId}/remove`)
+  },
+
+  setMainImage({}, { realizationId, mediaId }) {
+    return this.$axios.post(`/api/v1/realizations/${realizationId}/set-main-image`, { mediaId })
+  },
 }

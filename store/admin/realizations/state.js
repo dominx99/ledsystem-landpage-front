@@ -15,6 +15,8 @@ export const state = {
     realizations: true,
     addRealization: false,
     editRealization: false,
+    realizationImages: false,
+    realizationMainImage: false,
   },
   errors: {
     editRealization: {

@@ -15,6 +15,14 @@ export default {
     state.realization = realization
   },
 
+  setRealizationImages: ({ state }, images) => {
+    state.realization.images = images
+  },
+
+  setRealizationMainImage({ state }, mainImage) {
+    state.realization.mainImage = mainImage
+  },
+
   setErrors({ state }, { name, errors }) {
     state.errors[name] = errors
   },
@@ -25,4 +33,14 @@ export default {
     state.form.realization.slug        = realization.slug
     state.form.realization.description = realization.description
   },
+
+  clearErrors({ state }, name) {
+    state[name] = {
+      slug: [],
+    }
+  },
+
+  clearRealizationFormImages({ state }) {
+    state.form.realization.images = []
+  }
 }
