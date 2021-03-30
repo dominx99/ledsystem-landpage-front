@@ -1,4 +1,5 @@
 <template>
+  <div id="realizationEditImages">
     <draggable
       @start="drag=true"
       @end="drag=false"
@@ -7,7 +8,7 @@
     >
       <transition-group type="transition" name="flip-list" class="row">
         <v-col
-          v-for="media in medias"
+          v-for="(media, index) in medias"
           :key="media.id"
           cols="6"
           md="3"
@@ -25,6 +26,16 @@
               color="transparent"
               class="realization-edit-image-overlay"
             >
+              <v-btn
+                icon
+                color="green"
+                :data-bp="original(media).url"
+                @click="openFullScreen($event, index)"
+                class="bigpicture-image"
+              >
+                <v-icon>mdi-eye</v-icon>
+              </v-btn>
+
               <v-btn
                 v-if="isMainMedia(media)"
                 icon
@@ -53,11 +64,13 @@
         </v-col>
       </transition-group>
     </draggable>
+  </div>
 </template>
 
 <script>
 import { mapState, mapActions } from 'vuex'
 import draggable from 'vuedraggable'
+import BigPicture from 'bigpicture'
 
 export default {
   components: {
@@ -173,6 +186,13 @@ export default {
       }
 
       return this.realization.mainImage.id === media.id
+    },
+    openFullScreen(e, key) {
+      BigPicture({
+        el: e.target,
+        gallery: document.querySelectorAll('#realizationEditImages .bigpicture-image'),
+        position: key,
+      })
     },
   }
 }
