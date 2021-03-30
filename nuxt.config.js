@@ -94,11 +94,14 @@ export default {
       axios
         .get(process.env.GENERATE_BASE_URL + '/api/v1/realizations')
         .then(res => {
-          const routes = res.data.map(realization => {
-            return '/realizacje/' + realization.slug
+          let resultRoutes = []
+
+          res.data.forEach(realization => {
+            resultRoutes.push('/realizacje/' + realization.slug)
+            resultRoutes.push('/admin/realizacje/' + realization.slug)
           })
 
-          callback(null, routes)
+          callback(null, resultRoutes)
         })
         .catch(callback)
     }
