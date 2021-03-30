@@ -28,15 +28,15 @@
         <v-col
           cols="6"
           md="2"
-          v-for="(image, index) in realization.images"
+          v-for="(media, index) in realization.medias"
           :key="index"
         >
           <v-img
-            :src="thumbnail(image).url"
+            :src="thumbnail(media).url"
             class="rounded-lg bigpicture-image"
             :aspect-ratio="16/9"
             @click="openFullScreen($event, index)"
-            :data-bp="original(image).url"
+            :data-bp="original(media).url"
             aria-controls
           />
         </v-col>
@@ -63,26 +63,24 @@ export default {
   },
   methods: {
     mainImageThumbnailUrl() {
-      return this.realization.mainImage.find(image => image.type == 'thumbnail').url
+      return this.realization.mainImage.images.find(image => image.type == 'thumbnail').url
     },
-    thumbnail(images) {
-      return images.find(image => image.type == 'thumbnail')
+    thumbnail(media) {
+      return media.images.find(image => image.type == 'thumbnail')
     },
-    original(images) {
-      return images.find(image => image.type == 'original')
+    original(media) {
+      return media.images.find(image => image.type == 'original')
     },
     back() {
       this.$router.back()
     },
     openFullScreen(e, key) {
-      console.log('open full screen')
-
       BigPicture({
         el: e.target,
         gallery: document.querySelectorAll('#realizationPage .bigpicture-image'),
         position: key,
       })
-      },
+    },
   }
 }
 </script>

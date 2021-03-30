@@ -16,6 +16,7 @@
     "bigpicture": "^2.5.3",
     "core-js": "^3.8.2",
     "nuxt": "^2.14.12",
-    "vee-validate": "^3.4.5"
+    "vee-validate": "^3.4.5",
+    "vuedraggable": "^2.24.3"
   }
 }

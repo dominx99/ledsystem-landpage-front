@@ -15,8 +15,8 @@ export default {
     state.realization = realization
   },
 
-  setRealizationImages: ({ state }, images) => {
-    state.realization.images = images
+  setRealizationImages: ({ state }, medias) => {
+    state.realization.medias = medias
   },
 
   setRealizationMainImage({ state }, mainImage) {

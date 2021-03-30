@@ -33,7 +33,7 @@ export default {
   props: ['realization'],
   methods: {
     thumbnailUrl() {
-      return this.realization.mainImage.find(image => image.type == 'thumbnail').url
+      return this.realization.mainImage.images.find(image => image.type == 'thumbnail').url
     },
     goToRealization(slug) {
       this.$router.push({ name: 'realizacje-slug', params: { slug } })

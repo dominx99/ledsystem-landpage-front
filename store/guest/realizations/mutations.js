@@ -9,7 +9,7 @@ export default {
 
   setRealizations: ({ state }, realizations) => {
     realizations = realizations.filter(
-      realization => realization.mainImage.findIndex(image => image.type === 'thumbnail') !== -1
+      realization => realization.mainImage.images.findIndex(image => image.type === 'thumbnail') !== -1
     )
 
     state.realizations = realizations

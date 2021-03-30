@@ -131,5 +131,9 @@ export default {
 
   removeRealization({}, realizationId) {
     return this.$axios.post(`/api/v1/realizations/${realizationId}/remove`)
-  }
+  },
+
+  updateRealizationMediasOrder({ commit }, data) {
+    return this.$axios.post(`/api/v1/medias/update-order`, data)
+  },
 }

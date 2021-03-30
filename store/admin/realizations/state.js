@@ -2,6 +2,7 @@ export const state = {
   realization: {},
   realizations: [],
   form: {
+    medias: [],
     realization: {
       id: null,
       name: '',
