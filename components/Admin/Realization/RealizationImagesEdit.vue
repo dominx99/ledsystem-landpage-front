@@ -5,7 +5,7 @@
       ghost-class="ghost"
       v-model="medias"
     >
-      <transition-group type="transition" name="flip-list" tag="v-row">
+      <transition-group type="transition" name="flip-list" class="row">
         <v-col
           v-for="media in medias"
           :key="media.id"
