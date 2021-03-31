@@ -6,25 +6,33 @@
       ghost-class="ghost"
       v-model="medias"
     >
-      <transition-group type="transition" name="flip-list" class="row">
+      <transition-group
+        type="transition"
+        name="flip-list"
+        class="row"
+      >
         <v-col
           v-for="(media, index) in medias"
           :key="media.id"
           cols="6"
           md="3"
         >
-          <v-card>
+          <v-card
+            style="pointer-events: none;"
+          >
             <v-img
               :src="thumbnail(media).url"
               class="rounded-lg"
               :aspect-ratio="16/9"
               :data-bp="original(media).url"
               aria-controls
+              style="pointer-events: none;"
             />
             <v-overlay
               absolute
               color="transparent"
               class="realization-edit-image-overlay"
+              style="pointer-events: none;"
             >
               <v-btn
                 icon
@@ -206,6 +214,7 @@ export default {
     justify-content: flex-end;
     width: 100%;
     height: 100%;
+    pointer-events: none;
   }
 }
 
