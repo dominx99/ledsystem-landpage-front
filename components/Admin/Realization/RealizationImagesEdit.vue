@@ -31,7 +31,6 @@
               absolute
               color="transparent"
               class="realization-edit-image-overlay"
-              style="pointer-events: none;"
             >
               <v-btn
                 icon
@@ -213,7 +212,6 @@ export default {
     justify-content: flex-end;
     width: 100%;
     height: 100%;
-    pointer-events: none;
   }
 }
 
