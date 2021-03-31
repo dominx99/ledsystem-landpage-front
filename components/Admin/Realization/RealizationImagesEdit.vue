@@ -3,6 +3,7 @@
     <draggable
       ghost-class="ghost"
       v-model="medias"
+      filter=".action-button"
     >
       <transition-group
         type="transition"
@@ -37,7 +38,7 @@
                 color="green"
                 :data-bp="original(media).url"
                 @click="openFullScreen($event, index)"
-                class="bigpicture-image"
+                class="bigpicture-image action-button"
               >
                 <v-icon>mdi-eye</v-icon>
               </v-btn>
@@ -46,6 +47,7 @@
                 v-if="isMainMedia(media)"
                 icon
                 color="yellow"
+                class="action-button"
               >
                 <v-icon>mdi-star</v-icon>
               </v-btn>
@@ -54,6 +56,7 @@
                 icon
                 color="light"
                 @click="handleSetMainMedia(media)"
+                class="action-button"
               >
                 <v-icon>mdi-star</v-icon>
               </v-btn>
@@ -62,6 +65,7 @@
                 icon
                 color="red"
                 @click="handleRemoveMedia(media)"
+                class="action-button"
               >
                 <v-icon>mdi-delete</v-icon>
               </v-btn>
