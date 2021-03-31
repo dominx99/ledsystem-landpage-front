@@ -1,8 +1,6 @@
 <template>
   <div id="realizationEditImages">
     <draggable
-      @start="drag=true"
-      @end="drag=false"
       ghost-class="ghost"
       v-model="medias"
     >
@@ -84,9 +82,6 @@ export default {
   components: {
       draggable,
   },
-  data: () => ({
-    drag: false,
-  }),
   async asyncData({ params }) {
     const slug = params.slug
     return { slug }
