@@ -16,59 +16,53 @@
           cols="6"
           md="3"
         >
-          <v-card
-            style="pointer-events: none;"
-          >
+          <v-card>
             <v-img
               :src="thumbnail(media).url"
               class="rounded-lg"
               :aspect-ratio="16/9"
               :data-bp="original(media).url"
               aria-controls
-              style="pointer-events: none;"
-            />
-            <v-overlay
-              absolute
-              color="transparent"
-              class="realization-edit-image-overlay"
             >
-              <v-btn
-                icon
-                color="green"
-                :data-bp="original(media).url"
-                @click="openFullScreen($event, index)"
-                class="bigpicture-image action-button"
-              >
-                <v-icon>mdi-eye</v-icon>
-              </v-btn>
+              <div class="d-flex justify-end">
+                <v-btn
+                  icon
+                  color="green"
+                  :data-bp="original(media).url"
+                  @click="openFullScreen($event, index)"
+                  class="bigpicture-image action-button"
+                >
+                  <v-icon>mdi-eye</v-icon>
+                </v-btn>
 
-              <v-btn
-                v-if="isMainMedia(media)"
-                icon
-                color="yellow"
-                class="action-button"
-              >
-                <v-icon>mdi-star</v-icon>
-              </v-btn>
-              <v-btn
-                v-else
-                icon
-                color="light"
-                @click="handleSetMainMedia(media)"
-                class="action-button"
-              >
-                <v-icon>mdi-star</v-icon>
-              </v-btn>
+                <v-btn
+                  v-if="isMainMedia(media)"
+                  icon
+                  color="yellow"
+                  class="action-button"
+                >
+                  <v-icon>mdi-star</v-icon>
+                </v-btn>
+                <v-btn
+                  v-else
+                  icon
+                  color="light"
+                  @click="handleSetMainMedia(media)"
+                  class="action-button"
+                >
+                  <v-icon>mdi-star</v-icon>
+                </v-btn>
 
-              <v-btn
-                icon
-                color="red"
-                @click="handleRemoveMedia(media)"
-                class="action-button"
-              >
-                <v-icon>mdi-delete</v-icon>
-              </v-btn>
-            </v-overlay>
+                <v-btn
+                  icon
+                  color="red"
+                  @click="handleRemoveMedia(media)"
+                  class="action-button"
+                >
+                  <v-icon>mdi-delete</v-icon>
+                </v-btn>
+              </div>
+            </v-img>
           </v-card>
         </v-col>
       </transition-group>
