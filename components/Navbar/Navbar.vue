@@ -71,6 +71,11 @@ export default {
         targetElement: '#realizations',
       },
       {
+        icon: 'mdi-inbox',
+        name: 'Oferta',
+        targetElement: '#offer',
+      },
+      {
         icon: 'mdi-email-open',
         name: 'Kontakt',
         targetElement: '#contact',

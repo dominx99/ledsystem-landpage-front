@@ -2,7 +2,7 @@
   <v-layout column>
     <MainCarousel />
     <RealizationList />
-    <InformationCards />
+    <OfferSection />
     <ContactSection />
   </v-layout>
 </template>
@@ -10,12 +10,12 @@
 <script>
 import RealizationList from './../components/Realizations/RealizationList'
 import ContactSection from './../components/Contact/ContactSection'
-import InformationCards from './../components/Landpage/Information/InformationCards.vue'
+import OfferSection from './../components/Landpage/Information/OfferSection.vue'
 import MainCarousel from './../components/Landpage/Header/Carousel/MainCarousel.vue'
 
 export default {
   components: {
-    InformationCards,
+    OfferSection,
     MainCarousel,
     RealizationList,
     ContactSection,

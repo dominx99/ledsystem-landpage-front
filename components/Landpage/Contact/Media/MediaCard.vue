@@ -41,16 +41,18 @@
       </template>
     </v-list>
     <div class="mt-auto">
-      <v-btn
+      <template
         v-for="icon in icons"
-        :key="icon"
-        class="mx-4 pa-8"
-        icon
       >
-        <v-icon size="24px">
-          {{ icon }}
-        </v-icon>
-      </v-btn>
+        <v-btn
+          class=""
+          icon
+        >
+          <v-icon size="24px">
+            {{ icon }}
+          </v-icon>
+        </v-btn>
+      </template>
     </div>
   </div>
 </template>

@@ -172,19 +172,4 @@ export default {
     }
   }
 }
-
-@keyframes lightUp {
-  0% {
-    background: rgb(16, 21, 30);
-  }
-  20% {
-    background: rgb(53, 117, 156);
-  }
-  40% {
-    background: rgb(16, 21, 30);
-  }
-  100% {
-    background: rgb(16, 21, 30);
-  }
-}
 </style>

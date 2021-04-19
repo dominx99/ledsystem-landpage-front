@@ -1,34 +1,30 @@
 <template>
-<section id="information-cards" class="dark2 pb-16">
+<section id="offer" class="dark2 pb-16">
   <v-container>
     <h3 class="text-h3 text-center my-16">Oferta</h3>
-    <v-row dense>
-      <v-col
-        v-for="(card, index) in cards"
-        :key="index"
-        :md="card.flex.cols"
-        :xs="card.flex.md"
-      >
-        <InformationCard
-          :card="card"
-        />
-      </v-col>
-    </v-row>
+
+    <OfferItem
+      v-for="(offer, index) in offers"
+      :offer="offer"
+    />
   </v-container>
 </section>
 </template>
 
 <script>
-import InformationCard from './InformationCard'
+import OfferItem from './OfferItem.vue'
 
 export default {
   components: {
-    InformationCard,
+    OfferItem,
   },
   data: () => ({
-    cards: [
+    offers: [
       {
+        side: 'left',
         title: 'Doradztwo oświetleniowe',
+        subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+        img: 'https://trello-attachments.s3.amazonaws.com/60054e6905c5e81d70bd86b3/60060ea5a515b189180b3db3/0b10917459018d96b86391322b9f8c2f/tlo1.JPG',
         list: [
           'Poznajemy twoje potrzeby',
           'Przedstawiamy ofertę',
@@ -36,14 +32,12 @@ export default {
           'Dostarczamy produkt w miejsce inwestycji',
           'Prowadzimy wsparcie techniczne',
         ],
-        flex: {
-          cols: 6,
-          md: 12,
-        },
-        color: 'blue darken-1'
       },
       {
+        side: 'right',
         title: 'Oprawy oświetleniowe',
+        subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+        img: 'https://trello-attachments.s3.amazonaws.com/60054e6905c5e81d70bd86b3/60060ea5a515b189180b3db3/d5aad01cb6cb5eaa6e445c388b33db0f/tlo2.JPG',
         list: [
           'Poznajemy twoje potrzeby',
           'Przedstawiamy ofertę',
@@ -51,14 +45,12 @@ export default {
           'Dostarczamy produkt w miejsce inwestycji',
           'Prowadzimy wsparcie techniczne',
         ],
-        flex: {
-          cols: 6,
-          md: 12,
-        },
-        color: 'cyan darken-1'
       },
       {
+        side: 'left',
         title: 'Oświetlenie',
+        subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+        img: 'https://trello-attachments.s3.amazonaws.com/60054e6905c5e81d70bd86b3/60060ea5a515b189180b3db3/fba4014d2ff385946fbb545e74629cc9/tlo3.JPG',
         list: [
           'Poznajemy twoje potrzeby',
           'Przedstawiamy ofertę',
@@ -66,14 +58,12 @@ export default {
           'Dostarczamy produkt w miejsce inwestycji',
           'Prowadzimy wsparcie techniczne',
         ],
-        flex: {
-          cols: 6,
-          md: 12,
-        },
-        color: 'teal darken-1'
       },
       {
+        side: 'right',
         title: 'Oświetlenie',
+        subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+        src: 'https://trello-attachments.s3.amazonaws.com/60054e6905c5e81d70bd86b3/60060ea5a515b189180b3db3/4823d348e1293534c77dca0ed8269fc1/tlo4.JPG',
         list: [
           'Poznajemy twoje potrzeby',
           'Przedstawiamy ofertę',
@@ -81,11 +71,6 @@ export default {
           'Dostarczamy produkt w miejsce inwestycji',
           'Prowadzimy wsparcie techniczne',
         ],
-        flex: {
-          cols: 6,
-          md: 12,
-        },
-        color: 'green darken-1'
       },
     ],
   }),
