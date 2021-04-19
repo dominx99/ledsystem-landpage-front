@@ -1,6 +1,6 @@
 <template>
-  <v-row class="my-16">
-    <v-col cols="6" :order="offer.side == 'left' ? 2 : 1">
+  <v-row class="my-md-16 my-8">
+    <v-col cols="12" md="6" :order-md="offer.side == 'left' ? 2 : 1" order="2">
       <v-row>
         <v-col cols="12">
           <h2 v-text="offer.title"></h2>
@@ -26,7 +26,7 @@
         </v-col>
       </v-row>
     </v-col>
-    <v-col cols="6" :order="offer.side == 'left' ? 1 : 2">
+    <v-col cols="12" md="6" :order-md="offer.side == 'left' ? 1 : 2" order="1">
       <v-img :src="offer.img" />
     </v-col>
   </v-row>
