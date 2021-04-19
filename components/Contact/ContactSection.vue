@@ -27,7 +27,7 @@
 
 <script>
 import ContactForm from './ContactForm'
-import MediaCard from './../Landpage/Contact/Media/MediaCard'
+import MediaCard from './../Landpage/Contact/Media/MediaCard.vue'
 
 export default {
   components: {

@@ -42,10 +42,10 @@
     </v-list>
     <div class="mt-auto">
       <template
-        v-for="icon in icons"
+        v-for="(icon, index) in icons"
       >
         <v-btn
-          class=""
+          :class="mediaIconClass(index)"
           icon
         >
           <v-icon size="24px">
@@ -66,6 +66,19 @@
         'mdi-youtube',
       ],
     }),
+    methods: {
+      mediaIconClass(index) {
+        if (index == 0) {
+          return 'pa-8 ml-1 mr-4'
+        }
+
+        if ((index + 1) == this.icons.length) {
+          return 'pa-8 ml-4'
+        }
+
+        return 'pa-8 mx-4'
+      }
+    },
   }
 </script>
 
