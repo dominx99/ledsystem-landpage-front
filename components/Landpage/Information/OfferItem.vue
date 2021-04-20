@@ -1,6 +1,6 @@
 <template>
   <v-row class="my-md-16 my-8">
-    <v-col cols="12" md="6" :order-md="offer.side == 'left' ? 2 : 1" order="2">
+    <v-col cols="12" md="5" :offset-md="isOdd() ? 2 : 0" :order-md="isOdd() ? 2 : 1" order="2">
       <v-row>
         <v-col cols="12">
           <h2 v-text="offer.title"></h2>
@@ -26,18 +26,21 @@
         </v-col>
       </v-row>
     </v-col>
-    <v-col cols="12" md="6" :order-md="offer.side == 'left' ? 1 : 2" order="1">
-      <v-img :src="offer.img" />
+    <v-col cols="12" md="5" :offset-md="! isOdd() ? 2 : 0" :order-md="isOdd() ? 1 : 2" order="1">
+      <v-img
+        class="rounded-lg"
+        :src="offer.img"
+      />
     </v-col>
   </v-row>
 </template>
 
 <script>
 export default {
-  props: ['offer'],
+  props: ['offer', 'index'],
   methods: {
-    isSideLeft() {
-      return this.offer.side == 'left'
+    isOdd() {
+      return this.index % 2 == 1
     },
   },
 }

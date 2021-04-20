@@ -6,6 +6,8 @@
     <OfferItem
       v-for="(offer, index) in offers"
       :offer="offer"
+      :key="index"
+      :index="index"
     />
   </v-container>
 </section>
@@ -21,10 +23,9 @@ export default {
   data: () => ({
     offers: [
       {
-        side: 'left',
         title: 'Oprawy oświetleniowe',
         subtitle: 'Sprzedaż opraw oświetleniowych marek spełniających nasze kryteria jakości i żywotności.',
-        img: 'https://trello-attachments.s3.amazonaws.com/60054e6905c5e81d70bd86b3/60060ea5a515b189180b3db3/d5aad01cb6cb5eaa6e445c388b33db0f/tlo2.JPG',
+        img: 'offer/oprawy_oswietleniowe.jpg',
         list: [
           'Żyrandole',
           'Kinkiety',
@@ -35,10 +36,9 @@ export default {
         ],
       },
       {
-        side: 'right',
         title: 'Usługi Elektroinstalacyjne',
         subtitle: 'Kompleksowe usługi związane z wykonaniem, modernizacją instalacji.',
-        img: 'https://trello-attachments.s3.amazonaws.com/60054e6905c5e81d70bd86b3/60060ea5a515b189180b3db3/0b10917459018d96b86391322b9f8c2f/tlo1.JPG',
+        img: 'offer/elektroinstalacje.jpg',
         list: [
           'Montaż instalacji elektrycznych',
           'Montaż instalacji teletechcznicznych',
@@ -49,16 +49,41 @@ export default {
         ],
       },
       {
-        side: 'left',
         title: 'Projektowanie oświetlenia',
         subtitle: 'Planowanie rozmieszczenia oświetlenia oraz dobór lamp i ich parametrów technicznych.',
-        img: 'https://trello-attachments.s3.amazonaws.com/60054e6905c5e81d70bd86b3/60060ea5a515b189180b3db3/fba4014d2ff385946fbb545e74629cc9/tlo3.JPG',
+        img: 'offer/tasmy_led.jpg',
         list: [
           'Poznajemy twoje potrzeby',
           'Przedstawiamy ofertę',
           'Wybieramy najlepsze dla ciebie rozwiązanie',
           'Dostarczamy produkt w miejsce inwestycji',
           'Prowadzimy wsparcie techniczne',
+        ],
+      },
+      {
+        title: 'Taśmy LED i Akcesoria',
+        subtitle: 'Profesjonalne taśmy led dla zastosowań dekoracyjnych i użytkowych.',
+        img: 'offer/tasmy_led.jpg',
+        list: [
+          'Taśmy LED 12/24V',
+          'Taśmy LED RGB, RGBW',
+          'Cyfrowe Taśmy LED',
+          'Sterowniki',
+          'Profile LED',
+          'Zasilacze',
+          'Akcesoria',
+        ],
+      },
+      {
+        title: 'Włączniki dotykowe',
+        subtitle: 'Renomowana marka LIVOLO, dotykowe szklane włączniki.',
+        img: 'offer/osprzet_elektryczny.jpg',
+        list: [
+          'Szeroka gama kolorów',
+          'Wysoka jakość wykonania',
+          'Montaż i Konfiguracja',
+          'Pomoc Techniczna',
+          'Mnogość rozwiazań',
         ],
       },
     ],
