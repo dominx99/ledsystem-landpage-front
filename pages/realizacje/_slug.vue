@@ -72,6 +72,12 @@ export default {
       return media.images.find(image => image.type == 'original')
     },
     back() {
+      if (this.$router.history._startLocation == this.$router.history.current.path) {
+        this.$router.push('/')
+
+        return
+      }
+
       this.$router.back()
     },
     openFullScreen(e, key) {
