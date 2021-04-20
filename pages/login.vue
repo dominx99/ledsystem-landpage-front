@@ -19,12 +19,14 @@
           filled
           type="email"
           v-model="form.email"
+          v-on:keyup.enter="handleLoginClick()"
         />
         <v-text-field
           label="Hasło"
           filled
           type="password"
           v-model="form.password"
+          v-on:keyup.enter="handleLoginClick()"
         />
         <v-btn
           class="float-right"
@@ -78,7 +80,6 @@ export default {
     redirectToAdminDashboard() {
       this.$router.push('/admin/realizacje')
     },
-
   },
 }
 </script>
