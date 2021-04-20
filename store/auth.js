@@ -9,6 +9,11 @@ export const actions = {
       password,
     })
   },
+  logout({ commit }) {
+    localStorage.removeItem('accessToken')
+
+    commit('setAccessToken', '')
+  },
 }
 
 export const mutations = {

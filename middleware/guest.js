@@ -3,6 +3,6 @@ export default function ({ store, redirect }) {
 
   if (store.getters['auth/authorized']) {
     console.log('authorized')
-    return redirect('/admin/dashboard')
+    return redirect('/admin/realizacje')
   }
 }

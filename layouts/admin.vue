@@ -30,6 +30,17 @@
             <v-list-item-title>Ciemny tryb</v-list-item-title>
           </v-list-item-content>
         </v-list-item>
+        <v-list-item
+          link
+          @click="handleLogout()"
+        >
+          <v-list-item-action>
+            <v-icon>mdi-door</v-icon>
+          </v-list-item-action>
+          <v-list-item-content>
+            <v-list-item-title>Wyloguj</v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
       </v-list>
     </v-navigation-drawer>
 
@@ -51,6 +62,7 @@
 </template>
 
 <script>
+import { mapActions } from 'vuex'
 import Navbar from './../components/Admin/Navbar/Navbar'
 
 export default {
@@ -66,8 +78,14 @@ export default {
     }
   },
   methods: {
+    ...mapActions('auth', ['logout']),
     toggleTheme() {
       this.$vuetify.theme.dark = ! this.$vuetify.theme.dark
+    },
+    handleLogout() {
+      this.logout()
+
+      this.$router.push({ name: 'login' })
     }
   }
 }

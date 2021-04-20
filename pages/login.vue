@@ -76,7 +76,7 @@ export default {
       }
     },
     redirectToAdminDashboard() {
-      this.$router.push('/admin/dashboard')
+      this.$router.push('/admin/realizacje')
     },
 
   },
