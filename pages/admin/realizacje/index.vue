@@ -38,8 +38,16 @@
 
       <template v-slot:item.actions="{ item }">
         <v-btn
+          @click="viewRealization(item)"
+          icon
+          color="green"
+        >
+          <v-icon>mdi-eye</v-icon>
+        </v-btn>
+        <v-btn
           @click="editRealization(item)"
           icon
+          color="yellow"
         >
           <v-icon>mdi-pencil</v-icon>
         </v-btn>
@@ -51,7 +59,6 @@
           <v-icon>mdi-delete</v-icon>
         </v-btn>
       </template>
-
     </v-data-table>
   </v-card>
 </template>
@@ -106,6 +113,9 @@ export default {
   },
   methods: {
     ...mapActions('admin/realizations', ['fetch', 'removeRealization']),
+    viewRealization(realization) {
+      this.$router.push({ name: 'realizacje-slug', params: { slug: realization.slug } })
+    },
     editRealization(realization) {
       this.$router.push({ name: 'admin-realizacje-slug', params: { slug: realization.slug } })
     },
