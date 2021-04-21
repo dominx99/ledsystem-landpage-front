@@ -1,3 +1,5 @@
+import Vue from 'vue'
+
 export default {
   setLoading: ({ state }, name) => {
     state.loading[name] = true
@@ -35,9 +37,7 @@ export default {
   },
 
   clearErrors({ state }, name) {
-    state[name] = {
-      slug: [],
-    }
+    Vue.set(state.errors, name, { slug: [] })
   },
 
   clearRealizationFormImages({ state }) {

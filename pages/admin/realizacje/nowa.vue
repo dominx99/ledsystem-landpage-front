@@ -6,10 +6,7 @@
         <ValidationProvider
           v-slot="{ errors }"
           name="Nazwa"
-          :rules="{
-            required: true,
-            min: 3,
-          }"
+          rules="required|min:3"
         >
           <v-text-field
             outlined
@@ -120,7 +117,7 @@ export default {
     },
   }),
   methods: {
-    ...mapMutations('admin/realizations', ['setLoading', 'removeLoading', 'setErrors']),
+    ...mapMutations('admin/realizations', ['setLoading', 'removeLoading', 'setErrors', 'clearErrors']),
     ...mapActions('admin/realizations', ['save']),
 
     slugify: text => {
@@ -139,6 +136,12 @@ export default {
 
     async handleSave() {
       try {
+        this.clearErrors('addRealization')
+
+        setTimeout(() => {
+          this.$refs.observer.reset()
+        }, 16)
+
         let valid = await this.$refs.observer.validate()
 
         this.setLoading('addRealization')
@@ -150,6 +153,7 @@ export default {
         this.redirectToRealizationList()
       } catch (e) {
         console.log('failed to save')
+        console.error('error', e)
 
         if (
           e.response &&
