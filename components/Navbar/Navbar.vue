@@ -1,10 +1,10 @@
 <template>
   <v-app-bar
     app
-    color="dark"
     fixed
     id="navbar"
-    style="background: rgb(16, 21, 30) none repeat scroll 0% 0% !important;"
+    color="dark"
+    class="dark1"
   >
     <v-container class="py-0 fill-height">
       <v-img

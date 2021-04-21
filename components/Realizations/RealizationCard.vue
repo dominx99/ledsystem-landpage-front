@@ -14,12 +14,12 @@
           <v-overlay
             v-if="hover"
             absolute
-            color="teal"
+            color="primary"
             class="realization-overlay"
           >
             <div
               v-text="realization.name"
-              class="realization-header teal py-4"
+              class="realization-header primary py-4"
             ></div>
           </v-overlay>
         </v-fade-transition>

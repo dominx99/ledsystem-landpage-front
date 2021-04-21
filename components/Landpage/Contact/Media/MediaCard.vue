@@ -1,5 +1,5 @@
 <template>
-  <div class="media-card dark3 pa-5 pa-md-10 d-flex flex-column">
+  <div class="media-card dark3 darken-2 pa-5 pa-md-10 d-flex flex-column">
     <h3 class="mb-3">Let's get in touch</h3>
     <p>We are open to any suggestions or just to have chat.</p>
     <v-list

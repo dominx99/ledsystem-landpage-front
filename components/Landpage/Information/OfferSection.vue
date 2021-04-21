@@ -1,5 +1,5 @@
 <template>
-<section id="offer" class="dark2 pb-16">
+<section id="offer" class="dark2 darken-1 pb-16">
   <v-container>
     <h3 class="text-h3 text-center my-16">Oferta</h3>
 

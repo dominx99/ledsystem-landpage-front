@@ -11,6 +11,7 @@
         tile
         width="100%"
         class="teal darken-2 text-center"
+        color="primary"
       >
         <v-card-text class="white--text">
           {{ new Date().getFullYear() }} &copy; <strong>Dominik Chylo</strong>

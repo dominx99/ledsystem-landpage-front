@@ -1,6 +1,6 @@
 <template>
   <ValidationObserver ref="observer" v-slot="{ validate, reset }">
-    <v-form class="contact-form pa-5 pa-md-10 dark3" style="height: 100%;">
+    <v-form class="contact-form pa-5 pa-md-10 dark3 darken-2" style="height: 100%;">
       <ValidationProvider
         v-slot="{ errors }"
         name="Email"
@@ -54,7 +54,7 @@
       </ValidationProvider>
 
       <v-btn
-        color="teal"
+        color="primary"
         @click="handleSendEmail()"
         :loading="loading"
         rounded
