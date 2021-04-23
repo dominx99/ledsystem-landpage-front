@@ -11,7 +11,9 @@
         src="/ledlogo_white.png"
         max-height="49"
         max-width="200"
+        width="200"
         type="button"
+        contain
         @click="logoAction()"
       />
       <v-spacer></v-spacer>
