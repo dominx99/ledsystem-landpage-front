@@ -14,6 +14,7 @@
         width="200"
         type="button"
         contain
+        class="transparent"
         @click="logoAction()"
       />
       <v-spacer></v-spacer>
