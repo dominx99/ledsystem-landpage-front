@@ -13,18 +13,30 @@
           </v-list-item-avatar>
 
           <v-list-item-content>
-            <v-list-item-title>503 482 315</v-list-item-title>
-            <v-list-item-subtitle>Telefon komórkowy</v-list-item-subtitle>
+            <v-list-item-subtitle>Sprzedaż Detaliczna</v-list-item-subtitle>
+            <v-list-item-title>+48 533 767 994</v-list-item-title>
+            <v-list-item-title>support@ledsystem.com.pl</v-list-item-title>
           </v-list-item-content>
         </v-list-item>
         <v-list-item>
           <v-list-item-avatar>
-            <v-icon>mdi-email</v-icon>
+            <v-icon>mdi-lightbulb</v-icon>
+          </v-list-item-avatar>
+          <v-list-item-content>
+            <v-list-item-subtitle>Inwestycje / Montaże</v-list-item-subtitle>
+            <v-list-item-title>+48 608 590 149</v-list-item-title>
+            <v-list-item-title>jakub@Ledsystem.com.pl</v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
+        <v-list-item>
+          <v-list-item-avatar>
+            <v-icon>mdi-cog-outline</v-icon>
           </v-list-item-avatar>
 
           <v-list-item-content>
-            <v-list-item-title>jakub@ledsystem.com.pl</v-list-item-title>
-            <v-list-item-subtitle>Email</v-list-item-subtitle>
+            <v-list-item-subtitle>Dział techniczny</v-list-item-subtitle>
+            <v-list-item-title>503 482 315</v-list-item-title>
+            <v-list-item-title>support@ledsystem.com.pl</v-list-item-title>
           </v-list-item-content>
         </v-list-item>
         <v-list-item>
@@ -33,54 +45,15 @@
           </v-list-item-avatar>
 
           <v-list-item-content>
+            <v-list-item-subtitle>Lokalizacja</v-list-item-subtitle>
             <v-list-item-title>Jarosława Dąbrowskiego 18D</v-list-item-title>
             <v-list-item-title>14-200 Iława</v-list-item-title>
-            <v-list-item-subtitle class="mt-3">Adres</v-list-item-subtitle>
           </v-list-item-content>
         </v-list-item>
       </template>
     </v-list>
-    <div class="mt-auto">
-      <template
-        v-for="(icon, index) in icons"
-      >
-        <v-btn
-          :class="mediaIconClass(index)"
-          icon
-        >
-          <v-icon size="24px">
-            {{ icon }}
-          </v-icon>
-        </v-btn>
-      </template>
-    </div>
   </div>
 </template>
-
-<script>
-  export default {
-    data: () => ({
-      icons: [
-        'mdi-facebook',
-        'mdi-instagram',
-        'mdi-youtube',
-      ],
-    }),
-    methods: {
-      mediaIconClass(index) {
-        if (index == 0) {
-          return 'pa-8 ml-1 mr-4'
-        }
-
-        if ((index + 1) == this.icons.length) {
-          return 'pa-8 ml-4'
-        }
-
-        return 'pa-8 mx-4'
-      }
-    },
-  }
-</script>
 
 <style lang="scss">
 .media-card {
