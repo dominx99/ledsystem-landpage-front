@@ -15,6 +15,14 @@ export default {
     state.realizations = realizations
   },
 
+  setRealizationsVisibleOnMainPage: ({ state }, realizationsVisibleOnMainPage) => {
+    realizationsVisibleOnMainPage = realizationsVisibleOnMainPage.filter(
+      realization => realization.mainImage.images.findIndex(image => image.type === 'thumbnail') !== -1
+    )
+
+    state.realizationsVisibleOnMainPage = realizationsVisibleOnMainPage
+  },
+
   setRealization: ({ state }, realization) => {
     state.realization = realization
   },

@@ -37,6 +37,11 @@
       </template>
 
       <template v-slot:item.actions="{ item }">
+        <div class="d-flex align-center">
+        <v-switch
+          v-model="item.visibleOnMainPage == '1'"
+          @change="handleToggleRealizationVisibilityOnMainPage($event, item.id)"
+        ></v-switch>
         <v-btn
           @click="viewRealization(item)"
           icon
@@ -58,6 +63,8 @@
         >
           <v-icon>mdi-delete</v-icon>
         </v-btn>
+
+        </div>
       </template>
     </v-data-table>
   </v-card>
@@ -112,7 +119,7 @@ export default {
     }
   },
   methods: {
-    ...mapActions('admin/realizations', ['fetch', 'removeRealization']),
+    ...mapActions('admin/realizations', ['fetch', 'removeRealization', 'toggleRealizationVisibilityOnMainPage']),
     viewRealization(realization) {
       this.$router.push({ name: 'realizacje-slug', params: { slug: realization.slug } })
     },
@@ -135,6 +142,13 @@ export default {
       }
 
       return process.env.storageUrl + product.image.thumbnail.path
+    },
+    handleToggleRealizationVisibilityOnMainPage(event, realizationId) {
+      this.toggleRealizationVisibilityOnMainPage({ realizationId, isVisible: event })
+    },
+    isVisible(item) {
+      console.log(item.visibleOnMainPage == "1")
+      return item.visibleOnMainPage == "1" ? true : false
     },
   }
 }

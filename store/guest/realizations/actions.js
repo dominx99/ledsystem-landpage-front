@@ -13,6 +13,20 @@ export default {
       commit('removeLoading', 'realizations')
     }
   },
+  async fetchVisibleOnMainPage({ commit }) {
+    try {
+      commit('setLoading', 'realizationsVisibleOnMainPage')
+
+      const res = await this.$axios.get(`api/v1/realizations/visible-on-main-page`)
+
+      commit('setRealizationsVisibleOnMainPage', res.data)
+      commit('removeLoading', 'realizationsVisibleOnMainPage')
+    } catch (e) {
+      console.error("Could not load realizations")
+
+      commit('removeLoading', 'realizationsVisibleOnMainPage')
+    }
+  },
   async find({ commit }, slug) {
     try {
       commit('setLoading', 'realization')

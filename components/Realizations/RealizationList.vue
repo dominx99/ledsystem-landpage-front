@@ -27,11 +27,11 @@ export default {
     RealizationCard,
   },
   computed: mapState({
-    realizations: state => state.guest.realizations.state.realizations,
-    loading: state => state.guest.realizations.state.loading.realizationList,
+    realizations: state => state.guest.realizations.state.realizationsVisibleOnMainPage,
+    loading: state => state.guest.realizations.state.loading.realizationsVisibleOnMainPage,
   }),
   mounted() {
-    this.$store.dispatch('guest/realizations/fetch')
+    this.$store.dispatch('guest/realizations/fetchVisibleOnMainPage')
   }
 }
 </script>

@@ -133,7 +133,11 @@ export default {
     return this.$axios.post(`/api/v1/realizations/${realizationId}/remove`)
   },
 
-  updateRealizationMediasOrder({ commit }, data) {
+  updateRealizationMediasOrder({}, data) {
     return this.$axios.post(`/api/v1/medias/update-order`, data)
   },
+
+  toggleRealizationVisibilityOnMainPage({}, { realizationId, isVisible }) {
+    return this.$axios.post(`/api/v1/realizations/${realizationId}/update-visible-on-main-page`, { isVisible })
+  }
 }
