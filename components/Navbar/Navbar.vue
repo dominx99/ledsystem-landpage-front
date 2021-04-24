@@ -27,6 +27,14 @@
         class="d-none d-md-flex"
       ></v-btn>
       <v-btn
+        text
+        class="d-none d-md-flex"
+        @click="goToAdminRealizations()"
+        v-if="isAdmin"
+      >
+        Admin
+      </v-btn>
+      <v-btn
         icon
         tile
         class="d-sm-flex d-md-none"
@@ -57,6 +65,17 @@
               <v-list-item-title v-text="link.name"></v-list-item-title>
             </v-list-item-content>
           </v-list-item>
+          <v-list-item
+            @click="goToAdminRealizations()"
+            v-if="isAdmin"
+          >
+            <v-list-item-icon>
+              <v-icon>mdi-account</v-icon>
+            </v-list-item-icon>
+            <v-list-item-content>
+              <v-list-item-title>Admin</v-list-item-title>
+            </v-list-item-content>
+          </v-list-item>
         </v-list-item-group>
       </v-list>
     </template>
@@ -64,6 +83,8 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
+
 export default {
   data: () => ({
     extended: false,
@@ -84,6 +105,9 @@ export default {
         targetElement: '#contact',
       }
     ],
+  }),
+  computed: mapGetters({
+    isAdmin: 'auth/authorized',
   }),
   methods: {
     logoAction() {
@@ -106,6 +130,9 @@ export default {
       this.$vuetify.goTo(targetElement)
 
       this.extended = false
+    },
+    goToAdminRealizations() {
+      this.$router.push({ name: 'admin-realizacje' })
     },
   },
 }

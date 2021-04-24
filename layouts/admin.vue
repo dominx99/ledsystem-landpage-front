@@ -32,6 +32,17 @@
         </v-list-item>
         <v-list-item
           link
+          @click="goToHomepage()"
+        >
+          <v-list-item-action>
+            <v-icon>mdi-lightbulb</v-icon>
+          </v-list-item-action>
+          <v-list-item-content>
+            <v-list-item-title>Strona główna</v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
+        <v-list-item
+          link
           @click="handleLogout()"
         >
           <v-list-item-action>
@@ -86,7 +97,10 @@ export default {
       this.logout()
 
       this.$router.push({ name: 'login' })
-    }
+    },
+    goToHomepage() {
+      this.$router.push({ name: 'index' })
+    },
   }
 }
 </script>
