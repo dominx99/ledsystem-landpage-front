@@ -19,7 +19,7 @@
           >
             <div
               v-text="realization.name"
-              class="realization-header primary py-4"
+              class="realization-header primary py-4 text-h4"
             ></div>
           </v-overlay>
         </v-fade-transition>
@@ -56,7 +56,6 @@ export default {
       height: fit-content;
       opacity: .8;
       letter-spacing: 1px;
-      font-weight: 700;
       text-align: center;
       transition: all .2s;
       border-radius: 8px 8px 0 0;

@@ -1,6 +1,6 @@
 <template>
   <v-card
-    height="356"
+    class="footer-card"
   >
     <v-footer
       absolute
@@ -91,3 +91,13 @@ export default {
   })
 }
 </script>
+
+<style lang="scss">
+.footer-card {
+  height: 820px;
+
+  @media (min-width: 960px) {
+    height: 356px;
+  }
+}
+</style>

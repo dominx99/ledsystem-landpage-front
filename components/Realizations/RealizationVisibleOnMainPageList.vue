@@ -14,24 +14,32 @@
           />
         </v-col>
       </v-row>
+
+      <div
+        class="d-flex justify-center mt-md-15 mt-6"
+      >
+        <SeeAllRealizationsButton class="px-md-12" />
+      </div>
     </v-container>
   </section>
 </template>
 
 <script>
-import RealizationCard from './RealizationCard'
+import RealizationCard from './RealizationCard.vue'
+import SeeAllRealizationsButton from './SeeAllRealizationsButton.vue'
 import { mapState } from 'vuex'
 
 export default {
   components: {
     RealizationCard,
+    SeeAllRealizationsButton,
   },
   computed: mapState({
-    realizations: state => state.guest.realizations.state.realizations,
-    loading: state => state.guest.realizations.state.loading.realizationList,
+    realizations: state => state.guest.realizations.state.realizationsVisibleOnMainPage,
+    loading: state => state.guest.realizations.state.loading.realizationsVisibleOnMainPage,
   }),
   mounted() {
-    this.$store.dispatch('guest/realizations/fetch')
+    this.$store.dispatch('guest/realizations/fetchVisibleOnMainPage')
   }
 }
 </script>
