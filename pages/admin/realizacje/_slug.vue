@@ -41,6 +41,17 @@ import RealizationForm from './../../../components/Admin/Realization/Realization
 import RealizationImagesEdit from './../../../components/Admin/Realization/RealizationImagesEdit.vue'
 
 export default {
+  head() {
+    return {
+      meta: [
+        {
+          hid: 'robots',
+          name: 'robots',
+          content: 'noindex, nofollow'
+        }
+      ],
+    }
+  },
   layout: 'admin',
   middleware: 'auth',
   async asyncData({ params }) {

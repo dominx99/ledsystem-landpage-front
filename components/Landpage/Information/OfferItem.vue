@@ -30,6 +30,7 @@
       <v-img
         class="rounded-lg"
         :src="offer.img"
+        alt="Obrazek oferty"
       />
     </v-col>
   </v-row>

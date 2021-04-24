@@ -16,6 +16,7 @@
         contain
         class="transparent"
         @click="logoAction()"
+        alt="Logo"
       />
       <v-spacer></v-spacer>
       <v-btn

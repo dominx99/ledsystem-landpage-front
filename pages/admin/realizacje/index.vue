@@ -33,6 +33,7 @@
           width="100"
           :aspect-ratio="16/9"
           :src="imageUrl(item)"
+          alt="Miniaturka głownego obrazka realizacji"
         />
       </template>
 
@@ -74,6 +75,17 @@
 import { mapActions } from 'vuex'
 
 export default {
+  head() {
+    return {
+      meta: [
+        {
+          hid: 'robots',
+          name: 'robots',
+          content: 'noindex, nofollow'
+        }
+      ],
+    }
+  },
   layout: 'admin',
   middleware: 'auth',
   mounted() {

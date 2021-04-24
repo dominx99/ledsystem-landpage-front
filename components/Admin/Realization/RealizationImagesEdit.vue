@@ -23,6 +23,7 @@
               :aspect-ratio="16/9"
               :data-bp="original(media).url"
               aria-controls
+              alt="Miniaturka jednego z obrazków realizacji"
             >
               <div class="d-flex justify-end">
                 <v-btn

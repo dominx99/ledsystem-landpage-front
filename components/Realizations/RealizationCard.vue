@@ -8,6 +8,7 @@
         <v-img
           :aspect-ratio="16/9"
           :src="thumbnailUrl()"
+          alt="Miniaturka głównego obrazka realizacji"
         ></v-img>
 
         <v-fade-transition>

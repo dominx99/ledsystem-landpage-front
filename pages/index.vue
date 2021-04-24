@@ -20,5 +20,16 @@ export default {
     RealizationVisibleOnMainPageList,
     ContactSection,
   },
+  head() {
+    return {
+      meta: [
+        {
+          hid: 'robots',
+          name: 'robots',
+          content: 'index, follow'
+        }
+      ],
+    }
+  },
 }
 </script>

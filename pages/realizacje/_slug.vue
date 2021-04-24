@@ -14,6 +14,7 @@
             class="rounded-lg"
             :src="mainImageThumbnailUrl()"
             :aspect-ratio="16/9"
+            alt="Miniaturka obrazka głównej realizacji"
           ></v-img>
         </v-col>
         <v-col md="6" xs="12">
@@ -38,6 +39,7 @@
             @click="openFullScreen($event, index)"
             :data-bp="original(media).url"
             aria-controls
+            alt="Miniaturka jednego z obrazków realizacji"
           />
         </v-col>
       </v-row>
@@ -50,6 +52,17 @@ import { mapState } from 'vuex'
 import BigPicture from 'bigpicture'
 
 export default {
+  head() {
+    return {
+      meta: [
+        {
+          hid: 'robots',
+          name: 'robots',
+          content: 'index, follow'
+        }
+      ],
+    }
+  },
   async asyncData({ params }) {
     const slug = params.slug
     return { slug }

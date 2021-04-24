@@ -98,6 +98,17 @@ import { ValidationObserver, ValidationProvider } from 'vee-validate'
 import { mapState, mapActions, mapMutations } from 'vuex'
 
 export default {
+  head() {
+    return {
+      meta: [
+        {
+          hid: 'robots',
+          name: 'robots',
+          content: 'noindex, nofollow'
+        }
+      ],
+    }
+  },
   layout: 'admin',
   middleware: 'auth',
   components: {
