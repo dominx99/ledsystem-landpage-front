@@ -54,12 +54,13 @@ import BigPicture from 'bigpicture'
 export default {
   head() {
     return {
+      title: `${this.realization.name} | Ledsystem`,
       meta: [
         {
           hid: 'robots',
           name: 'robots',
           content: 'index, follow'
-        }
+        },
       ],
     }
   },

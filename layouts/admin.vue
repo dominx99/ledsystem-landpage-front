@@ -77,6 +77,11 @@ import { mapActions } from 'vuex'
 import Navbar from './../components/Admin/Navbar/Navbar'
 
 export default {
+  head() {
+    return {
+      title: `Admin | Ledsystem`,
+    }
+  },
   components: {
     Navbar,
   },

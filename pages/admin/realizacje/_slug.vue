@@ -43,6 +43,7 @@ import RealizationImagesEdit from './../../../components/Admin/Realization/Reali
 export default {
   head() {
     return {
+      title: `${this.realization.name} | Ledsystem`,
       meta: [
         {
           hid: 'robots',
