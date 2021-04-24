@@ -62,7 +62,7 @@ export default {
   data: () => ({
     items: [
       {
-        src: 'https://trello-attachments.s3.amazonaws.com/60054e6905c5e81d70bd86b3/60060ea5a515b189180b3db3/0b10917459018d96b86391322b9f8c2f/tlo1.JPG',
+        src: 'slider/tlo1.jpeg',
         title: 'Projektowanie Oświetlenia',
         subtitle: 'Oświetlamy wnętrza i zewnętrza, aranżując światło dopasowane do potrzeb danego pomieszczenia, przeznaczenia, designu oraz oczekiwań klienta.',
         icon: {
@@ -73,7 +73,7 @@ export default {
         },
       },
       {
-        src: 'https://trello-attachments.s3.amazonaws.com/60054e6905c5e81d70bd86b3/60060ea5a515b189180b3db3/d5aad01cb6cb5eaa6e445c388b33db0f/tlo2.JPG',
+        src: 'slider/tlo2.jpeg',
         title: 'Taśmy Led',
         subtitle: 'W naszej ofercie znajduje się szerokie spektrum taśm led, pozwalają one tworzyć światło dekoracyjne ale także użytkowe, co udało nam się udowodnić w realizacji MARINA IŁAWA',
         icon: {
@@ -84,7 +84,7 @@ export default {
         },
       },
       {
-        src: 'https://trello-attachments.s3.amazonaws.com/60054e6905c5e81d70bd86b3/60060ea5a515b189180b3db3/fba4014d2ff385946fbb545e74629cc9/tlo3.JPG',
+        src: 'slider/tlo3.jpeg',
         title: 'Elektroinstalacje',
         subtitle: 'Zajmujemy się wykonaniem i modernizacją instalacji elektrycznych oraz teletechnicznych. Także koordynacją prac z nimi związanych',
         icon: {
@@ -95,7 +95,7 @@ export default {
         },
       },
       {
-        src: 'https://trello-attachments.s3.amazonaws.com/60054e6905c5e81d70bd86b3/60060ea5a515b189180b3db3/4823d348e1293534c77dca0ed8269fc1/tlo4.JPG',
+        src: 'slider/tlo4.jpeg',
         title: 'Oprawy Oświetleniowe',
         subtitle: 'Doświadczenie zdobyte w trakcie usług montażowych, wykorzytujemy przy sprzedaży lamp i źródeł śwaitła. Współpracujemy z wieloma renomowanymi markami z POLSKI i EUROPY',
         icon: {
