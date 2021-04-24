@@ -2,7 +2,7 @@
   <v-app>
     <Navbar />
 
-    <v-main class="dark2">
+    <v-main class="dark2 darken-1">
       <nuxt />
     </v-main>
 
