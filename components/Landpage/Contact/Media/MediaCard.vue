@@ -35,7 +35,7 @@
 
           <v-list-item-content>
             <v-list-item-subtitle>Dział techniczny</v-list-item-subtitle>
-            <v-list-item-title>503 482 315</v-list-item-title>
+            <v-list-item-title>+48 503 482 315</v-list-item-title>
             <v-list-item-title>support@ledsystem.com.pl</v-list-item-title>
           </v-list-item-content>
         </v-list-item>
