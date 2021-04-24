@@ -135,13 +135,8 @@ export default {
         alert('Nie udało się usunąć realizacji')
       }
     },
-    imageUrl(product) {
-      return ''
-      if (! product.image) {
-        return process.env.storageUrl + product.images[0].thumbnail.path
-      }
-
-      return process.env.storageUrl + product.image.thumbnail.path
+    imageUrl(realization) {
+      return realization.mainImage.images.find(image => image.type == 'thumbnail').url
     },
     handleToggleRealizationVisibilityOnMainPage(event, realizationId) {
       this.toggleRealizationVisibilityOnMainPage({ realizationId, isVisible: event })
