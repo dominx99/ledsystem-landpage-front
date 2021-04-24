@@ -20,6 +20,7 @@
         >
           <v-row
             class="header-row"
+            no-gutters
           >
             <v-col
               :xs="12"
@@ -119,7 +120,7 @@ export default {
 .header-section {
   .header-container {
     .header-row {
-      @media (min-width: 768px) {
+      @media (min-width: 960px) {
         align-items: center;
       }
 
@@ -133,9 +134,10 @@ export default {
         flex-direction: column;
         padding: 0 2.5rem;
 
-        @media (min-width: 768px) {
+        @media (min-width: 960px) {
           height: 100%;
           order: 1;
+          padding: 0;
           margin: 0;
           text-align: left;
           align-items: flex-start;
@@ -163,7 +165,7 @@ export default {
         align-items: center;
         justify-content: center;
 
-        @media (min-width: 768px) {
+        @media (min-width: 960px) {
           height: 100%;
           order: 3;
           justify-content: flex-end
