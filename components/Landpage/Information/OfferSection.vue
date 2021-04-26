@@ -51,7 +51,7 @@ export default {
       {
         title: 'Projektowanie oświetlenia',
         subtitle: 'Planowanie rozmieszczenia oświetlenia oraz dobór lamp i ich parametrów technicznych.',
-        img: 'offer/tasmy_led.jpg',
+        img: 'offer/projektowanie.jpg',
         list: [
           'Poznajemy twoje potrzeby',
           'Przedstawiamy ofertę',
@@ -77,13 +77,41 @@ export default {
       {
         title: 'Włączniki dotykowe',
         subtitle: 'Renomowana marka LIVOLO, dotykowe szklane włączniki.',
-        img: 'offer/osprzet_elektryczny.jpg',
+        img: 'offer/livolo.jpg',
         list: [
           'Szeroka gama kolorów',
           'Wysoka jakość wykonania',
           'Montaż i Konfiguracja',
           'Pomoc Techniczna',
           'Mnogość rozwiazań',
+        ],
+      },
+      {
+        title: 'Montaż Taśm LED',
+        subtitle: 'Profesjonalne usługi montażu taśm led we wnękach i profilach.',
+        img: 'offer/montaz_tasm_led_oferta.jpg',
+        list: [
+          'Przygotowanie instalacji',
+          'Zaprojektowanie wnęki sufitowej',
+          'Oczyszczanie wnęki lub profila',
+          'Precyzyjne lutowanie taśm',
+          'Przeciwdziałanie cienom',
+          'Wieloletnie doświadczenie',
+        ],
+      },
+      {
+        title: 'Osprzęt Elektryczny',
+        subtitle: 'Montaż oraz konfiguracja osprzętu elektrycznego.',
+        img: 'offer/osprzet_elektryczny.jpg',
+        list: [
+          'Dopasowanie kolorystyki osprzętu',
+          'Przygotowanie listy gniazd i włączników',
+          'Włączniki dotykowe i mechaniczne',
+          'Gniazda internetowe',
+          'Gniazda RTV',
+          'Ładowarki USB',
+          'Czujki ruchu',
+          'Radia dopuszkowe',
         ],
       },
     ],
