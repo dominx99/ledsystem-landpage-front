@@ -16,7 +16,7 @@
       </v-row>
 
       <div
-        class="d-flex justify-center mt-md-15 mt-6"
+        class="d-flex justify-center mt-md-15 mt-10"
       >
         <SeeAllRealizationsButton class="px-md-12" />
       </div>
