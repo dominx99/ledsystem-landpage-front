@@ -23,25 +23,33 @@
             no-gutters
           >
             <v-col
-              :xs="12"
-              :sm="12"
-              :md="5"
+              cols="12"
+              md="5"
               class="header-column"
             >
               <h2 class="text-h3 title" v-text="item.title"></h2>
               <p class="subtitle" v-text="item.subtitle"></p>
             </v-col>
             <v-col
-              :xs="12"
-              :sm="12"
-              :md="7"
+              cols="12"
+              md="7"
               class="animation-column"
             >
               <component
+                v-if="item.icon"
                 :is="item.icon.element"
                 :height="item.icon.height"
                 :width="item.icon.width"
                 :fill="item.icon.color"
+                class="mb-5 mb-md-0"
+              />
+              <v-img
+                class="icon-img mb-5 mb-md-0"
+                v-if="item.img"
+                contain
+                :src="item.img.src"
+                :max-width="item.img.width"
+                :style="{ maxHeight: item.img.height + 'px' }"
               />
             </v-col>
           </v-row>
@@ -62,9 +70,9 @@ export default {
   data: () => ({
     items: [
       {
-        src: 'slider/tlo1.jpeg',
+        src: 'slider/projektowanie_slider.jpg',
         title: 'Projektowanie Oświetlenia',
-        subtitle: 'Oświetlamy wnętrza i zewnętrza, aranżując światło dopasowane do potrzeb danego pomieszczenia, przeznaczenia, designu oraz oczekiwań klienta.',
+        subtitle: 'Oferujemy usługi związane z doradztwem w zakresie oświetlenia. Aranżujemy światło dopasowane do potrzeb i oczekiwań wizualnych klienta.',
         icon: {
           element: ProjectManagementIcon,
           height: 184,
@@ -73,20 +81,18 @@ export default {
         },
       },
       {
-        src: 'slider/tlo2.jpeg',
+        src: 'slider/tasmy_led.jpg',
         title: 'Taśmy Led',
-        subtitle: 'W naszej ofercie znajduje się szerokie spektrum taśm led, pozwalają one tworzyć światło dekoracyjne ale także użytkowe, co udało nam się udowodnić w realizacji MARINA IŁAWA',
-        icon: {
-          element: LedStripIcon,
-          height: 184,
+        subtitle: 'W naszej ofercie znajduje się szeroki wybór taśm led, różnią się one przeróżnymi parametrami. Z pewnością jakąś dla Ciebie wybierzemy!',
+        img: {
+          src: 'slider/icons/tasma.png',
           width: 184,
-          color: '#FEFEFE',
         },
       },
       {
-        src: 'slider/tlo3.jpeg',
+        src: 'slider/elektryka.jpg',
         title: 'Elektroinstalacje',
-        subtitle: 'Zajmujemy się wykonaniem i modernizacją instalacji elektrycznych oraz teletechnicznych. Także koordynacją prac z nimi związanych',
+        subtitle: 'Zajmujemy się wykonaniem i modernizacją instalacji elektrycznych oraz teletechnicznych. Także koordynacją prac z nimi związanych.',
         icon: {
           element: SocketIcon,
           height: 184,
@@ -95,15 +101,34 @@ export default {
         },
       },
       {
-        src: 'slider/tlo4.jpeg',
+        src: 'slider/oprawy.jpg',
         title: 'Oprawy Oświetleniowe',
-        subtitle: 'Doświadczenie zdobyte w trakcie usług montażowych, wykorzytujemy przy sprzedaży lamp i źródeł śwaitła. Współpracujemy z wieloma renomowanymi markami z POLSKI i EUROPY',
+        subtitle: 'Doświadczenie zdobyte w trakcie usług montażowych, wykorzystujemy przy sprzedaży lamp i źródeł śwaitła. Współpracujemy z wieloma renomowanymi markami z POLSKI i EUROPY.',
         icon: {
           element: LightbulbIcon,
           height: 184,
           width: 184,
           color: '#FEFEFE',
           //color: '#84FFFF',
+        },
+      },
+      {
+        src: 'slider/akcesoria_led.jpg',
+        title: 'Akcesoria LED',
+        subtitle: 'Zasilacze 12V, 24V - wodoodporne lub modułowe. Sterowniki, piloty i panele sterujące. Do wszystkich taśm. Profile aluminiowe, natynkowe, wpuszczane, architektoniczne.',
+        img: {
+          src: 'slider/icons/pilot.png',
+          width: 184,
+          height: 220,
+        },
+      },
+      {
+        src: 'slider/montaz_tasm_led.jpg',
+        title: 'Montaż Taśm LED',
+        subtitle: 'Od wielu lat zajmujemy się montażem taśm led. Dbamy o każdy detal mogący wpłynąć na działanie i efekt świecenia taśmy.',
+        img: {
+          src: 'slider/icons/montaz_tasm.png',
+          width: 184,
         },
       },
     ],
@@ -113,7 +138,7 @@ export default {
 </script>
 
 <style lang="scss">
-.carousel-item-image .v-image__image {
+.carousel-item-image .v-image__image--cover {
   filter: brightness(60%);
 }
 
@@ -153,10 +178,6 @@ export default {
         }
       }
 
-      .space-column {
-        order: 2;
-      }
-
       .animation-column {
         height: 45%;
         order: 1;
@@ -167,8 +188,14 @@ export default {
 
         @media (min-width: 960px) {
           height: 100%;
-          order: 3;
+          order: 2;
           justify-content: flex-end
+        }
+
+        .icon-img {
+          @media (min-width: 960px) {
+            max-height: initial !important;
+          }
         }
       }
     }
