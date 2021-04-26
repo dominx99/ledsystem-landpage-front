@@ -16,7 +16,7 @@
             v-if="hover"
             absolute
             color="primary"
-            class="realization-overlay"
+            class="realization-overlay px-3"
           >
             <div
               v-text="realization.name"
