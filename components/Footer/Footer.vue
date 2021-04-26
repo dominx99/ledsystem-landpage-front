@@ -13,8 +13,8 @@
         class="darken-2 text-center"
         color="primary"
       >
-        <v-container class="my-4 mx-5 mx-md-0">
-          <v-row>
+        <v-container class="my-4">
+          <v-row class="mx-2 mx-md-0">
             <v-col
               v-for="(column, index) in columns"
               :key="index"
