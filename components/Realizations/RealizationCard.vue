@@ -16,11 +16,11 @@
             v-if="hover"
             absolute
             color="primary"
-            class="realization-overlay px-3"
+            class="realization-overlay"
           >
             <div
               v-text="realization.name"
-              class="realization-header primary py-4 text-h4"
+              class="realization-header primary py-4 px-4 text-h4"
             ></div>
           </v-overlay>
         </v-fade-transition>
