@@ -27,7 +27,7 @@
               md="5"
               class="header-column"
             >
-              <h2 class="text-h3 title" v-text="item.title"></h2>
+              <h2 class="text-h4 text-md-h3 title" v-text="item.title"></h2>
               <p class="subtitle" v-text="item.subtitle"></p>
             </v-col>
             <v-col
