@@ -13,7 +13,7 @@
         class="darken-2 text-center"
         color="primary"
       >
-        <v-container class="my-4">
+        <v-container class="my-4 mx-5 mx-md-0">
           <v-row>
             <v-col
               v-for="(column, index) in columns"
@@ -179,10 +179,10 @@ export default {
 
 <style lang="scss">
 .footer-card {
-  height: 820px;
+  height: 628px;
 
   @media (min-width: 960px) {
-    height: 356px;
+    height: 332px;
   }
 }
 </style>
