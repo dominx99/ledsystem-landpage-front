@@ -1,5 +1,7 @@
 <template>
-  <div class="media-card dark3 darken-2 pa-5 pa-md-10 d-flex align-center">
+  <div class="media-card dark3 darken-2 pa-5 pa-md-10 d-flex flex-column">
+    <h3 class="mb-3">Masz pytania? Zadzwoń!</h3>
+    <p>Jesteśmy dostępni od poniedziałku do piątku od 9:00 do 17:00.</p>
     <v-list
       three-line
       color="transparent"
