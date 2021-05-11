@@ -15,7 +15,7 @@
           <v-list-item-content>
             <v-list-item-subtitle>Sprzedaż Detaliczna</v-list-item-subtitle>
             <v-list-item-title>+48 533 767 994</v-list-item-title>
-            <v-list-item-title>support@ledsystem.com.pl</v-list-item-title>
+            <v-list-item-title>agata@ledsystem.com.pl</v-list-item-title>
           </v-list-item-content>
         </v-list-item>
         <v-list-item>
@@ -36,7 +36,7 @@
           <v-list-item-content>
             <v-list-item-subtitle>Dział techniczny</v-list-item-subtitle>
             <v-list-item-title>+48 503 482 315</v-list-item-title>
-            <v-list-item-title>support@ledsystem.com.pl</v-list-item-title>
+            <v-list-item-title>robert@ledsystem.com.pl</v-list-item-title>
           </v-list-item-content>
         </v-list-item>
         <v-list-item>
