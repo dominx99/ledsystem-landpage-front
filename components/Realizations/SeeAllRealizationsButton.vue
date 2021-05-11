@@ -1,7 +1,7 @@
 <template>
   <v-btn
     @click="goToAllRealizations()"
-    color="primary"
+    color="white"
     rounded
     outlined
     class="see-all-realizations-button pa-6"
