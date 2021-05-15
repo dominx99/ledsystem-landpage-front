@@ -10,7 +10,7 @@
         flat
         tile
         width="100%"
-        class="darken-2 text-center"
+        class="text-center"
         color="primary"
       >
         <v-container class="my-4">

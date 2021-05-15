@@ -54,7 +54,7 @@
       </ValidationProvider>
 
       <v-btn
-        color="primary"
+        color="white"
         @click="handleSendEmail()"
         :loading="loading"
         rounded
