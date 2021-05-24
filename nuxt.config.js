@@ -21,7 +21,7 @@ export default {
       {
         hid: 'description',
         name: 'description',
-        content: 'W naszej ofercie znajduje się szerokie spektrum taśm led, pozwalają one tworzyć światło dekoracyjne ale także użytkowe, co udało nam się udowodnić w realizacji MARINA IŁAWA.'
+        content: 'Usługi elektryczne, modernizacja i wykonanie instalacji. Sprzedaż i doradztwo w zakresie oświetlenia, taśm LED, sterowników i zasilaczy.'
       },
       {
         hid: 'canonical',
