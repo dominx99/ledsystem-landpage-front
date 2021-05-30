@@ -13,7 +13,7 @@
           </v-list-item-avatar>
 
           <v-list-item-content>
-            <v-list-item-subtitle>Sprzedaż Detaliczna</v-list-item-subtitle>
+            <v-list-item-subtitle>Sprzedaż Detaliczna i Hurtowa / Doradztwo</v-list-item-subtitle>
             <v-list-item-title>+48 533 767 994</v-list-item-title>
             <v-list-item-title>agata@ledsystem.com.pl</v-list-item-title>
           </v-list-item-content>
@@ -23,7 +23,7 @@
             <v-icon>mdi-lightbulb</v-icon>
           </v-list-item-avatar>
           <v-list-item-content>
-            <v-list-item-subtitle>Inwestycje / Montaże</v-list-item-subtitle>
+            <v-list-item-subtitle>Inwestycje / Montaż / Doradztwo</v-list-item-subtitle>
             <v-list-item-title>+48 608 590 149</v-list-item-title>
             <v-list-item-title>jakub@Ledsystem.com.pl</v-list-item-title>
           </v-list-item-content>
@@ -34,8 +34,8 @@
           </v-list-item-avatar>
 
           <v-list-item-content>
-            <v-list-item-subtitle>Dział techniczny</v-list-item-subtitle>
-            <v-list-item-title>+48 503 482 315</v-list-item-title>
+            <v-list-item-subtitle>Inwestycje / Montaż / Wsparcie techn.</v-list-item-subtitle>
+            <v-list-item-title>+48 530 378 939</v-list-item-title>
             <v-list-item-title>robert@ledsystem.com.pl</v-list-item-title>
           </v-list-item-content>
         </v-list-item>
@@ -66,4 +66,3 @@
   }
 }
 </style>
-
