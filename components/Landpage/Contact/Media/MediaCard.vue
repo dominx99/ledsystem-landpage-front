@@ -15,7 +15,7 @@
           <v-list-item-content>
             <v-list-item-subtitle>Sprzedaż Detaliczna i Hurtowa / Doradztwo</v-list-item-subtitle>
             <v-list-item-title>+48 533 767 994</v-list-item-title>
-            <v-list-item-title>agata@ledsystem.com.pl</v-list-item-title>
+            <v-list-item-title>Agata@ledsystem.com.pl</v-list-item-title>
           </v-list-item-content>
         </v-list-item>
         <v-list-item>
@@ -25,7 +25,7 @@
           <v-list-item-content>
             <v-list-item-subtitle>Inwestycje / Montaż / Doradztwo</v-list-item-subtitle>
             <v-list-item-title>+48 608 590 149</v-list-item-title>
-            <v-list-item-title>jakub@Ledsystem.com.pl</v-list-item-title>
+            <v-list-item-title>Jakub@Ledsystem.com.pl</v-list-item-title>
           </v-list-item-content>
         </v-list-item>
         <v-list-item>
@@ -36,7 +36,7 @@
           <v-list-item-content>
             <v-list-item-subtitle>Inwestycje / Montaż / Wsparcie techn.</v-list-item-subtitle>
             <v-list-item-title>+48 530 378 939</v-list-item-title>
-            <v-list-item-title>robert@ledsystem.com.pl</v-list-item-title>
+            <v-list-item-title>Robert@ledsystem.com.pl</v-list-item-title>
           </v-list-item-content>
         </v-list-item>
         <v-list-item>
