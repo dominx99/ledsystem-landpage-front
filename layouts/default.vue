@@ -22,7 +22,7 @@ export default {
   head() {
     let productionScripts = []
 
-    if (process.env.NODE_ENV === 'prod') {
+    if (process.env.NODE_ENV === 'production') {
       productionScripts = [
         { hid: 'analytics', src: 'https://www.googletagmanager.com/gtag/js?id=G-YLDB5297ZG', defer: true },
         {
