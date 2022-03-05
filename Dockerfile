@@ -1,4 +1,4 @@
-FROM node:alpine
+FROM node:15-alpine
 RUN apk add --no-cache git
 RUN apk add --no-cache openssh
 RUN apk add --no-cache yarn

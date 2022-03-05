@@ -9,21 +9,10 @@
       <template>
         <v-list-item>
           <v-list-item-avatar>
-            <v-icon>mdi-phone</v-icon>
-          </v-list-item-avatar>
-
-          <v-list-item-content>
-            <v-list-item-subtitle>Sprzedaż Detaliczna i Hurtowa / Doradztwo</v-list-item-subtitle>
-            <v-list-item-title>+48 533 767 994</v-list-item-title>
-            <v-list-item-title>Agata@ledsystem.com.pl</v-list-item-title>
-          </v-list-item-content>
-        </v-list-item>
-        <v-list-item>
-          <v-list-item-avatar>
             <v-icon>mdi-lightbulb</v-icon>
           </v-list-item-avatar>
           <v-list-item-content>
-            <v-list-item-subtitle>Inwestycje / Montaż / Doradztwo</v-list-item-subtitle>
+            <v-list-item-subtitle>Jakub Grajnert</v-list-item-subtitle>
             <v-list-item-title>+48 608 590 149</v-list-item-title>
             <v-list-item-title>Jakub@Ledsystem.com.pl</v-list-item-title>
           </v-list-item-content>
@@ -34,7 +23,7 @@
           </v-list-item-avatar>
 
           <v-list-item-content>
-            <v-list-item-subtitle>Inwestycje / Montaż / Wsparcie techn.</v-list-item-subtitle>
+            <v-list-item-subtitle>Robert Grajnert</v-list-item-subtitle>
             <v-list-item-title>+48 530 378 939</v-list-item-title>
             <v-list-item-title>Robert@ledsystem.com.pl</v-list-item-title>
           </v-list-item-content>
@@ -46,7 +35,7 @@
 
           <v-list-item-content>
             <v-list-item-subtitle>Lokalizacja</v-list-item-subtitle>
-            <v-list-item-title>Jarosława Dąbrowskiego 18D</v-list-item-title>
+            <v-list-item-title>Niepodległości 2 - Dom Handlowy FENIKS - Poziom -1</v-list-item-title>
             <v-list-item-title>14-200 Iława</v-list-item-title>
           </v-list-item-content>
         </v-list-item>
